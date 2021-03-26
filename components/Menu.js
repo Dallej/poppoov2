@@ -28,13 +28,13 @@ export default class Login extends React.Component{
             
             <View style={styles.container}>
                      
-                <Image style={styles.logo} source={require("../img/OAMKlogo.png")}></Image> 
-                     
-                <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('signup')}>
+                <Image style={styles.logo} source={require("../img/OAMKlogo.png")}></Image>                
+           
+                <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('rides')}>
                     <Text style={styles.buttonText}>Rides</Text>
                 </Pressable>
               
-                <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('profile')}>
+                <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('addride')}>
                     <Text style={styles.buttonText}>Add ride +</Text>
                 </Pressable>
 
