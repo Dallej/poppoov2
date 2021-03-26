@@ -5,6 +5,7 @@ import styles from './style/style'
 import Menu from './components/Menu'
 import AddRide from './components/AddRide'
 import Rides from './components/Rides'
+import Login from './components/Login'
 
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
@@ -50,6 +51,14 @@ export default class App extends React.Component {
           options={{
             title:"Info",
             headerTitle:"Info"
+          }}
+          >
+          </Stack.Screen>
+
+          <Stack.Screen name="login" component={Login}
+          options={{
+            title:"Login",
+            headerTitle:"Login"
           }}
           >
           </Stack.Screen>

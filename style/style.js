@@ -49,4 +49,8 @@ export default StyleSheet.create({
     marginBottom: 10,
     borderRadius: 5
   },
+  headertext:{
+    fontSize:20,
+    marginBottom:10
+  }
 });
