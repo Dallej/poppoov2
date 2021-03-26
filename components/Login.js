@@ -25,10 +25,11 @@ export default class Login extends React.Component{
  */
     render(){
         return(
+            
             <View style={styles.container}>
-
-                {/* <Image src="./img/OAMKlogo"></Image> */}
-           
+                     
+                <Image style={styles.logo} source={require("../img/OAMKlogo.png")}></Image> 
+                     
                 <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('signup')}>
                     <Text style={styles.buttonText}>Rides</Text>
                 </Pressable>

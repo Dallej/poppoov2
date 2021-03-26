@@ -34,5 +34,19 @@ export default StyleSheet.create({
   },
   buttonSignup: {
     fontSize: 12
-  }
-})
+  },
+  logo: {
+    width: '40%', 
+    height:'40%', 
+    resizeMode: 'contain', 
+    marginTop: -200
+  },
+  map: {
+    width: 200, 
+    height:200, 
+    resizeMode: 'contain', 
+    marginTop: 10,
+    marginBottom: 10,
+    borderRadius: 5
+  },
+});
