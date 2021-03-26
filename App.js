@@ -2,9 +2,9 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import styles from './style/style'
-import Login from './components/Login'
-import Profile from './components/Profile'
-import Signup from './components/Signup'
+import Menu from './components/Menu'
+import AddRide from './components/AddRide'
+import Rides from './components/Rides'
 
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
@@ -21,8 +21,8 @@ export default class App extends React.Component {
   return (
 
     <NavigationContainer >
-        <Stack.Navigator initialRouteName="Login">
-          <Stack.Screen name="login" component={Login}
+        <Stack.Navigator initialRouteName="Menu">
+          <Stack.Screen name="menu" component={Menu}
           options={{
             title:"poppoo",
             headerTitle:"poppoo"
@@ -30,7 +30,7 @@ export default class App extends React.Component {
           >
           </Stack.Screen>
 
-          <Stack.Screen name="signup" component={Signup}
+          <Stack.Screen name="rides" component={Rides}
           options={{
             title:"Available rides",
             headerTitle:"Available rides"
@@ -38,7 +38,7 @@ export default class App extends React.Component {
           >
           </Stack.Screen>
 
-          <Stack.Screen name="profile" component={Profile}
+          <Stack.Screen name="addride" component={AddRide}
           options={{
             title:"Offer a ride",
             headerTitle:"Offer a ride"
