@@ -48,9 +48,10 @@ export default class AddRide extends React.Component {
                 <Calendar
                 onChange={(date)=> this.setState({date})}
                 selected={this.state.date}
-                minDate={Moment().startOf('day')}
-                maxDate={Moment().add(10,'years').startOf('day')}
+                 minDate={Moment().startOf('day')}
+                 maxDate={Moment().add(10,'years').startOf('day')}
                 />
+                
                 
                {/* <Text>Hello, {firebase.auth().currentUser.email}</Text> */}
 
