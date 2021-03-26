@@ -42,9 +42,11 @@ export default class Login extends React.Component{
                     <Text style={styles.buttonText}>Instructions</Text>
                 </Pressable>
 
-                {/* <Button title="Dont have an account yet? Sign up"
-                onPress={() => this.props.navigation.navigate('signup')}
-                ></Button> */}
+                <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('login')}>
+                    <Text style={styles.buttonText}>Login</Text>
+                </Pressable>
+
+                
             </View>
         )
     }

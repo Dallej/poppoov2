@@ -23,10 +23,7 @@ export default class AddRide extends React.Component {
     }
 
     
-
-
-
-    /*  SingOut = () => {
+    /*  AddToDatabase = () => {
          const {email,password} = this.state
          firebase.auth()
          .signOut()
@@ -38,11 +35,16 @@ export default class AddRide extends React.Component {
         return (
             <View style={styles.container}>
 
-                <Text>This page is showing add ride +</Text>
-                <Text>Enter Driver name</Text>
-                <TextInput></TextInput>
-                <Text>Enter Time and date </Text>
-                <TextInput></TextInput>
+                <Text style={styles.headertext}>Enter new ride information:</Text>
+
+                <Text>Driver name</Text>
+                <TextInput placeholder="enter your name..."></TextInput>
+
+                <Text>Enter Time </Text>
+                <TextInput placeholder="enter time..." keyboardType="decimal-pad"></TextInput>
+
+
+                <Text>Select date </Text>
                 <Calendar
                 onChange={(date)=> this.setState({date})}
                 selected={this.state.date}
@@ -53,7 +55,7 @@ export default class AddRide extends React.Component {
                {/* <Text>Hello, {firebase.auth().currentUser.email}</Text> */}
 
                 
-                <Pressable style={styles.button} onPress={this.signOut}>
+                <Pressable style={styles.button} onPress={this.AddToDatabase}>
                     <Text style={styles.buttonText}>Add </Text>
                 </Pressable>
             </View>
