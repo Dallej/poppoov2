@@ -4,7 +4,7 @@ import {firebase, ROOT_REF} from '../firebase/Config'
 import styles from '../style/style'
 
 
-export default class Signup extends React.Component{
+export default class Rides extends React.Component{
 
     constructor(){
         super();
