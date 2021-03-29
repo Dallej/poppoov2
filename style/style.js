@@ -80,13 +80,18 @@ export default StyleSheet.create({
   },
   cardButton:{
     backgroundColor: '#abc9de',
-    borderColor: '#00000',
+    borderColor: '#000',
     borderTopWidth:1,
     height:30,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
     marginTop: 30,
-  
+  },
+  modal: {
+    flex: 1,
+    alignItems: 'center',
+    backgroundColor: '#abc9de',
+    padding: 100,
   }
 
 });
