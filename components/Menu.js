@@ -2,6 +2,7 @@ import React from 'react';
 import {View, TextInput, Pressable, Text, Button,Image} from 'react-native'
 import {firebase} from '../firebase/Config'
 import styles from '../style/style'
+
 // import {OAMKlogo} from '../img/OAMKlogo'
 
 

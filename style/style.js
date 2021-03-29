@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { block } from 'react-native-reanimated';
 
 export default StyleSheet.create({
   container: {
@@ -52,5 +53,39 @@ export default StyleSheet.create({
   headertext:{
     fontSize:20,
     marginBottom:10
+  },
+  cardbox: {
+    paddingTop: 20,
+    paddingBottom: 20,
+    backgroundColor: "#8DB4CF",
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#000000",
+    margin: 20,
+    width: 190,
+    height: 160,
+    textAlign: "center",
+    justifyContent: "center",
+  },
+  cardboxText: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#fff'
+  },
+  cardboxHeader: {
+    fontSize: 17,
+    fontWeight: 'bold',
+    color: '#fff'
+  },
+  cardButton:{
+    backgroundColor: '#abc9de',
+    borderColor: '#00000',
+    borderTopWidth:1,
+    height:30,
+    borderBottomLeftRadius: 10,
+    borderBottomRightRadius: 10,
+    marginTop: 30,
+  
   }
+
 });
