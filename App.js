@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
 import styles from './style/style'
 import Menu from './components/Menu'
 import AddRide from './components/AddRide'
@@ -18,7 +19,7 @@ const Stack = createStackNavigator();
 
 export default class App extends React.Component {
   render(){
-
+  
   
   return (
 
