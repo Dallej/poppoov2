@@ -23,7 +23,7 @@ export default class Signup extends React.Component{
             name: name,
             email:email
         }))
-        .then(() => this.props.navigation.navigate('profile'))
+        .then(() => this.props.navigation.navigate('menu'))
         .catch(error => console.log(error))
     }
 
