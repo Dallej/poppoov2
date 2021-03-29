@@ -31,7 +31,7 @@ export default StyleSheet.create({
   buttonText: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#fff'
+    color: '#fff',
   },
   buttonSignup: {
     fontSize: 12
