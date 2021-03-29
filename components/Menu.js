@@ -1,7 +1,8 @@
 import React from 'react';
-import {View, TextInput, Pressable, Text, Button,Image} from 'react-native'
-import {firebase} from '../firebase/Config'
-import styles from '../style/style'
+import {View, TextInput, Pressable, Text, Button,Image} from 'react-native';
+import {Icon} from 'react-native-vector-icons';
+import {firebase} from '../firebase/Config';
+import styles from '../style/style';
 
 // import {OAMKlogo} from '../img/OAMKlogo'
 
@@ -28,7 +29,7 @@ export default class Login extends React.Component{
         return(
             
             <View style={styles.container}>
-                     
+                    
                 <Image style={styles.logo} source={require("../img/OAMKlogo.png")}></Image>                
            
                 <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('rides')}>
@@ -36,18 +37,17 @@ export default class Login extends React.Component{
                 </Pressable>
               
                 <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('addride')}>
-                    <Text style={styles.buttonText}>Add ride +</Text>
-                </Pressable>
-
-                <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('info')}>
-                    <Text style={styles.buttonText}>Instructions</Text>
+                    <Text style={styles.buttonText}>Offer a Ride</Text>
                 </Pressable>
 
                 <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('login')}>
-                    <Text style={styles.buttonText}>Login</Text>
+                    <Text style={styles.buttonText}>Sign in</Text>
                 </Pressable>
 
-                
+                <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('info')}>
+                    <Text style={styles.buttonText}>About</Text>
+                </Pressable>
+               
             </View>
         )
     }
