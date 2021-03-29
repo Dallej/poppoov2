@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native'
 
 import styles from './style/style'
 import Menu from './components/Menu'

@@ -26,7 +26,7 @@ export default class AddRide extends React.Component {
 
     
       AddToDatabase = () => {
-        const {name,time} = this.state
+        const {name,time,date} = this.state
         firebase.auth()
         // .createUserWithEmailAndPassword(email, password)
         .then(() => firebase.database().ref(ROOT_REF).push({
