@@ -14,7 +14,7 @@ export default class Login extends React.Component{
         }    
     }
 
-    singIn = () => {
+    signIn = () => {
         const {email,password} = this.state
         firebase.auth()
         .signInWithEmailAndPassword(email, password)
@@ -22,7 +22,7 @@ export default class Login extends React.Component{
         .catch(error => console.log(error))
     }
 
-    singOut = () => {
+    signOut = () => {
         firebase.auth()
         .signOut()
         .then(() => this.props.navigation.navigate('login'))
