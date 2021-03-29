@@ -87,6 +87,16 @@ export default StyleSheet.create({
     borderBottomRightRadius: 10,
     marginTop: 30,
   
+  },
+  IconButton: {
+    
+    paddingVertical: 5,
+    alignItems: 'center',
+    backgroundColor: '#8DB4CF',
+    borderColor: '#8DB4CF',
+    borderWidth: 1,
+    borderRadius: 5,
+    width: 200,
   }
 
 });

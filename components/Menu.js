@@ -1,10 +1,11 @@
 import React from 'react';
 import {View, TextInput, Pressable, Text, Button,Image} from 'react-native';
-import {Icon} from 'react-native-vector-icons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import {firebase} from '../firebase/Config';
 import styles from '../style/style';
 
 // import {OAMKlogo} from '../img/OAMKlogo'
+const CarIcon = <Icon name="car" size={30} color="#900" />;
 
 
 export default class Login extends React.Component{
@@ -32,7 +33,7 @@ export default class Login extends React.Component{
                     
                 <Image style={styles.logo} source={require("../img/OAMKlogo.png")}></Image>                
            
-                <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('rides')}>
+                {/* <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('rides')}>
                     <Text style={styles.buttonText}>Rides</Text>
                 </Pressable>
               
@@ -46,7 +47,31 @@ export default class Login extends React.Component{
 
                 <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('info')}>
                     <Text style={styles.buttonText}>About</Text>
-                </Pressable>
+                </Pressable> */}
+
+
+                <Icon.Button name="group" style={styles.IconButton} onPress={() => this.props.navigation.navigate('rides')}>
+                    <Text style={styles.buttonText}>Rides</Text>
+                </Icon.Button>
+
+                <br />
+
+                <Icon.Button name="car" style={styles.IconButton} onPress={() => this.props.navigation.navigate('login')}>
+                    <Text style={styles.buttonText}>Offer a Ride</Text>
+                </Icon.Button>
+
+                <br />
+
+                <Icon.Button name="user" style={styles.IconButton} onPress={() => this.props.navigation.navigate('login')}>
+                    <Text style={styles.buttonText}>Sign in</Text>
+                </Icon.Button>
+
+                <br />
+
+                <Icon.Button name="info" style={styles.IconButton} onPress={() => this.props.navigation.navigate('info')}>
+                    <Text style={styles.buttonText}>About</Text>
+                </Icon.Button>
+
                
             </View>
         )
