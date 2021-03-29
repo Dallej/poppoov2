@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 import { block } from 'react-native-reanimated';
 
 export default StyleSheet.create({
+
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -31,7 +32,7 @@ export default StyleSheet.create({
   buttonText: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#fff'
+    color: '#fff',
   },
   buttonSignup: {
     fontSize: 12

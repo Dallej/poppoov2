@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native'
+
 import styles from './style/style'
 import Menu from './components/Menu'
 import AddRide from './components/AddRide'
@@ -10,6 +11,7 @@ import Login from './components/Login'
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 import Info from './components/Info';
+import Signup from './components/Signup';
 
 
 const Stack = createStackNavigator();
@@ -17,7 +19,7 @@ const Stack = createStackNavigator();
 
 export default class App extends React.Component {
   render(){
-
+  
   
   return (
 
@@ -25,8 +27,8 @@ export default class App extends React.Component {
         <Stack.Navigator initialRouteName="Menu">
           <Stack.Screen name="menu" component={Menu}
           options={{
-            title:"poppoo",
-            headerTitle:"poppoo"
+            title:"OAMK poppoo",
+            headerTitle:"OAMK poppoo", 
           }}
           >
           </Stack.Screen>
@@ -62,6 +64,15 @@ export default class App extends React.Component {
           }}
           >
           </Stack.Screen>
+
+          <Stack.Screen name="signup" component={Signup}
+          options={{
+            title:"Signup",
+            headerTitle:"Signup"
+          }}
+          >
+          </Stack.Screen>
+
         </Stack.Navigator>
     </NavigationContainer>
     

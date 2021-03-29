@@ -1,39 +1,41 @@
 import React from 'react';
-import {View, TextInput, Pressable, Text, Button} from 'react-native'
-import {firebase} from '../firebase/Config'
+import {View, TextInput, Pressable, Text} from 'react-native'
+import {firebase, ROOT_REF} from '../firebase/Config'
 import styles from '../style/style'
 
 
-export default class Login extends React.Component{
+export default class Signup extends React.Component{
 
     constructor(){
         super();
         this.state={
+            name:'',
             email:'',
             password:''
         }    
     }
 
-    signIn = () => {
-        const {email,password} = this.state
+    signUp = () => {
+        const {name, email,password} = this.state
         firebase.auth()
-        .signInWithEmailAndPassword(email, password)
+        .createUserWithEmailAndPassword(email, password)
+        .then(() => firebase.database().ref(ROOT_REF).push({
+            name: name,
+            email:email
+        }))
         .then(() => this.props.navigation.navigate('menu'))
-        .catch(error => console.log(error))
-    }
-
-    signOut = () => {
-        firebase.auth()
-        .signOut()
-        .then(() => this.props.navigation.navigate('login'))
         .catch(error => console.log(error))
     }
 
     render(){
         return(
             <View style={styles.container}>
-
-                <Text style={styles.headertext}>Login to your account:</Text>
+                <TextInput 
+                    style={styles.inputBox} 
+                    value={this.state.name}
+                    onChangeText={name=> this.setState({name})}
+                    placeholder='Full Name'> 
+                </TextInput>
 
                 <TextInput 
                     style={styles.inputBox} 
@@ -52,17 +54,9 @@ export default class Login extends React.Component{
                     secureTextEntry={true}> 
                 </TextInput>
 
-                <Pressable style={styles.button} onPress={this.signIn}>
-                    <Text style={styles.buttonText}>Login</Text>
+                <Pressable style={styles.button} onPress={this.signUp}>
+                    <Text style={styles.buttonText}>Signup</Text>
                 </Pressable>
-
-                <Pressable style={styles.button} onPress={this.signOut}>
-                    <Text style={styles.buttonText}>Sign Out</Text>
-                </Pressable>
-
-                <Button title="Dont have an account yet? Create one!"
-                onPress={() => this.props.navigation.navigate('signup')}
-                ></Button>
             </View>
         )
     }
