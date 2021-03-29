@@ -2,7 +2,10 @@ import React from 'react';
 import {View, Pressable, Text, TextInput} from 'react-native'
 import Calendar from 'react-native-calendar-datepicker';
 import Moment from 'moment';
+
 import {firebase} from '../firebase/Config'
+require('firebase/auth')
+
 import styles from '../style/style'
 
 
@@ -15,21 +18,19 @@ export default class AddRide extends React.Component {
     constructor() {
         super();
         this.state = {
-            email: '',
-            password: ''
+            name: '',
+            time: ''
         }
-        
-       
+    
     }
 
     
-    /*  AddToDatabase = () => {
-         const {email,password} = this.state
-         firebase.auth()
-         .signOut()
-         .then(() => this.props.navigation.navigate('profile'))
-         .catch(error => console.log(error))
-     } */
+      AddToDatabase = () => {
+        const {name,time} = this.state
+        firebase.auth()
+        .then(() => this.props.navigation.navigate('rides'))
+        .catch(error => console.log(error))
+     } 
 
     render() {
         return (
@@ -38,10 +39,29 @@ export default class AddRide extends React.Component {
                 <Text style={styles.headertext}>Enter new ride information:</Text>
 
                 <Text>Driver name</Text>
-                <TextInput placeholder="enter your name..."></TextInput>
+
+                <TextInput 
+                    style={styles.inputBox} 
+                    value={this.state.name}
+                    onChangeText={name=> this.setState({name})}
+                    placeholder='enter your name...'
+                    autoCapitalize='none'> 
+                </TextInput>
+
+                {/* <TextInput placeholder="enter your name..."></TextInput> */}
 
                 <Text>Enter Time </Text>
-                <TextInput placeholder="enter time..." keyboardType="decimal-pad"></TextInput>
+
+                <TextInput 
+                    style={styles.inputBox} 
+                    value={this.state.time}
+                    onChangeText={time=> this.setState({time})}
+                    placeholder='enter time...'
+                    autoCapitalize='none'
+                    keyboardType="decimal-pad"> 
+                </TextInput>
+
+                {/* <TextInput placeholder="enter time..." keyboardType="decimal-pad"></TextInput> */}
 
 
                 <Text>Select date </Text>

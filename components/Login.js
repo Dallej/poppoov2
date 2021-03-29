@@ -22,6 +22,13 @@ export default class Login extends React.Component{
         .catch(error => console.log(error))
     }
 
+    singOut = () => {
+        firebase.auth()
+        .signOut()
+        .then(() => this.props.navigation.navigate('login'))
+        .catch(error => console.log(error))
+    }
+
     render(){
         return(
             <View style={styles.container}>
@@ -47,6 +54,10 @@ export default class Login extends React.Component{
 
                 <Pressable style={styles.button} onPress={this.signIn}>
                     <Text style={styles.buttonText}>Login</Text>
+                </Pressable>
+
+                <Pressable style={styles.button} onPress={this.signOut}>
+                    <Text style={styles.buttonText}>Sign Out</Text>
                 </Pressable>
 
                 <Button title="Dont have an account yet? Create one!"
