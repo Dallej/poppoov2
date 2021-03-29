@@ -28,6 +28,11 @@ export default class AddRide extends React.Component {
       AddToDatabase = () => {
         const {name,time} = this.state
         firebase.auth()
+        // .createUserWithEmailAndPassword(email, password)
+        .then(() => firebase.database().ref(ROOT_REF).push({
+            name: name,
+            time:time
+        }))
         .then(() => this.props.navigation.navigate('rides'))
         .catch(error => console.log(error))
      } 

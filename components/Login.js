@@ -18,7 +18,7 @@ export default class Login extends React.Component{
         const {email,password} = this.state
         firebase.auth()
         .signInWithEmailAndPassword(email, password)
-        .then(() => this.props.navigation.navigate('profile'))
+        .then(() => this.props.navigation.navigate('menu'))
         .catch(error => console.log(error))
     }
 
