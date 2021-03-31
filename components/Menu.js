@@ -30,7 +30,7 @@ export default class Login extends React.Component{
             
             <View style={styles.container}>
                     
-                <Image style={styles.logo} source={require("../img/OAMKlogo.png")}></Image>                
+                <Image style={styles.logo} source={require("../img/POPPOO.png")}></Image>                
 
                 <View style={styles.menuButtons}>
                 <Icon.Button name="group" color= '#292929' style={styles.IconButton} onPress={() => this.props.navigation.navigate('rides')}>

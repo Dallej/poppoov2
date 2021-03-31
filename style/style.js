@@ -44,7 +44,7 @@ export default StyleSheet.create({
     fontSize: 12
   },
   logo: {
-    width: '40%', 
+    width: '80%', 
     height:'40%', 
     resizeMode: 'contain', 
     marginTop: -200
@@ -103,7 +103,7 @@ export default StyleSheet.create({
   IconButton: {
     paddingVertical: 13,
     alignItems: 'center',
-    backgroundColor: '#92ccde',
+    backgroundColor: '#A0E89F',
     borderColor: '#92ccde',
     borderWidth: 1,
     borderRadius: 5,
