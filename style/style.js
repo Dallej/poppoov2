@@ -10,7 +10,7 @@ export default StyleSheet.create({
     justifyContent: 'center'
   },
   inputBox: {
-    width: '85%',
+    width: '20%',
     margin: 10,
     padding: 15,
     fontSize: 16,
@@ -60,10 +60,12 @@ export default StyleSheet.create({
   headertext:{
     fontSize:20,
     marginBottom:10,
-    color: '#fff'
+    color:"#fff"
   },
-  
-
+  infotext:{
+    color:"#fff",
+    fontSize:18
+  },
   cardbox: {
     paddingTop: 20,
     paddingBottom: 20,

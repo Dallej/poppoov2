@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native'
+import {firebase} from './firebase/Config'
 
 import styles from './style/style'
 import Menu from './components/Menu'
@@ -16,6 +17,11 @@ import Signup from './components/Signup';
 
 
 const Stack = createStackNavigator();
+const user = firebase.auth().currentUser;
+
+if (user) {
+ console.log('User email: ', user.email);
+}
 
 
 export default class App extends React.Component {
