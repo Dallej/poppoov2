@@ -39,7 +39,7 @@ export default class Login extends React.Component{
                 </View>
 
                 <View style={styles.menuButtons}>
-                <Icon.Button name="car" color= '#292929' style={styles.IconButton} onPress={() => this.props.navigation.navigate('login')}>
+                <Icon.Button name="car" color= '#292929' style={styles.IconButton} onPress={() => this.props.navigation.navigate('addride')}>
                     <Text style={styles.buttonText}>Offer a Ride</Text>
                 </Icon.Button>
                 </View>
