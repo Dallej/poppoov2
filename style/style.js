@@ -25,8 +25,8 @@ export default StyleSheet.create({
     marginBottom: 10,
     paddingVertical: 5,
     alignItems: 'center',
-    backgroundColor: '#92ccde',
-    borderColor: '#92ccde',
+    backgroundColor: '#F1C11A',
+    borderColor: '#F1C11A',
     borderWidth: 1,
     borderRadius: 5,
     width: 150,
@@ -82,12 +82,14 @@ export default StyleSheet.create({
   cardboxText: {
     fontSize: 14,
     fontWeight: 'bold',
-    color: '#fff'
+    color: '#000',
+    marginLeft: 10
   },
   cardboxHeader: {
     fontSize: 17,
     fontWeight: 'bold',
-    color: '#fff'
+    color: '#000',
+    marginLeft: 10
   },
   cardButton:{
     backgroundColor: '#abc9de',
@@ -97,14 +99,26 @@ export default StyleSheet.create({
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
     marginTop: 30,
+    textAlign: "center"
   
+  },
+  buttonModal: {
+    marginTop: 10,
+    marginBottom: 10,
+    paddingVertical: 5,
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderColor: '#fff',
+    borderWidth: 1,
+    borderRadius: 5,
+    width: 150,
   },
 
   IconButton: {
     paddingVertical: 13,
     alignItems: 'center',
-    backgroundColor: '#A0E89F',
-    borderColor: '#92ccde',
+    backgroundColor: '#F1C11A',
+    borderColor: '#F1C11A',
     borderWidth: 1,
     borderRadius: 5,
     width: 200,

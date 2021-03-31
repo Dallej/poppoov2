@@ -20,12 +20,12 @@ export default class Info extends React.Component{
             <View style={styles.container}>
                 <Image style={styles.logo} source={require("../img/OAMKlogo.png")}></Image> 
                 
-                <Text style={{fontWeight: "bold"}}>OAMK Oulu pickup location</Text>
-                <Text> Yliopistokatu 9, 90570 Oulu </Text>
+                <Text style={{fontWeight: "bold", color: "#fff"}}>OAMK Oulu pickup location</Text>
+                <Text style={{color: "#fff"}}> Yliopistokatu 9, 90570 Oulu </Text>
             <Image style={styles.map} source={require("../img/mapfirst.jpg")}></Image> 
             
-                <Text style={{fontWeight: "bold"}}>OAMK Oulainen pickup location</Text>
-                <Text> Kuntotie 2, 86300 Oulainen</Text>
+                <Text style={{fontWeight: "bold", color: "#fff"}}>OAMK Oulainen pickup location</Text>
+                <Text  style={{color: "#fff"}}> Kuntotie 2, 86300 Oulainen</Text>
                 {/* <Pressable style={styles.button} onPress={this.signUp}>
                     <Text style={styles.buttonText}>Signup</Text>
                 </Pressable> */}

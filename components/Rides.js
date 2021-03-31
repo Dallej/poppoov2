@@ -28,7 +28,7 @@ export default class Rides extends React.Component {
         return (
             <View style={styles.container}>
 
-                <Text style={{ fontWeight: "bold", fontSize: 20 }}> My current rides </Text>
+                <Text style={{ fontWeight: "bold", fontSize: 20, color: "#fff" }}> My current rides </Text>
 
                  {/* MODAL */}
                     <Modal animationType={"slide"} transparent={false}
@@ -43,13 +43,13 @@ export default class Rides extends React.Component {
                             <Text style={styles.buttonText}> Departure: </Text>
                             <Text style={styles.buttonText}> Seats left: </Text>
 
-                            <Pressable style={styles.button} onPress={() => {
+                            <Pressable style={styles.buttonModal} onPress={() => {
                                 this.toggleModal(!this.state.modalVisible)}}>
                                 <Text style={styles.buttonText}>Close</Text>
                             </Pressable>
 
                             {/* JOIN RIDE */}
-                            <Pressable style={styles.button}><Text style={styles.buttonText}>JOIN RIDE</Text></Pressable>
+                            <Pressable style={styles.buttonModal}><Text style={styles.buttonText}>JOIN RIDE</Text></Pressable>
                         </View>
                     </Modal>
 
@@ -83,7 +83,7 @@ export default class Rides extends React.Component {
                     </View>
                 </View>
 
-                <Text style={{ fontWeight: "bold", fontSize: 20 }}>Join available rides</Text>
+                <Text style={{ fontWeight: "bold", fontSize: 20, color: "#fff" }}>Join available rides</Text>
 
                 {/* Add filter for destination here */}
 
