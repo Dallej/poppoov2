@@ -33,10 +33,10 @@ export default class Login extends React.Component {
 
 
     render() {
-        this.state = {
-            displayName: firebase.auth().currentUser.displayName,
-            uid: firebase.auth().currentUser.uid
-        }
+        // this.state = {
+        //     displayName: firebase.auth().currentUser.displayName,
+        //     uid: firebase.auth().currentUser.uid
+        // }
         return (
             <View style={styles.container}>
 
