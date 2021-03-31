@@ -1,67 +1,77 @@
 import React from 'react';
-import {View, TextInput, Pressable, Text, Button} from 'react-native'
-import {firebase} from '../firebase/Config'
+import { View, TextInput, Pressable, Text, Button } from 'react-native'
+import { firebase } from '../firebase/Config'
 import styles from '../style/style'
 
 
-export default class Login extends React.Component{
+export default class Login extends React.Component {
 
-    constructor(){
+    constructor() {
         super();
-        this.state={
-            email:'',
-            password:''
-            
-        }    
+        this.state = {
+            email: '',
+            password: ''
+        }
     }
 
     signIn = () => {
-        const {email,password} = this.state
+        const { email, password } = this.state
         firebase.auth()
-        .signInWithEmailAndPassword(email, password)
-        .then(() => this.props.navigation.navigate('menu'))
-        .catch(error => console.log(error))
+            .signInWithEmailAndPassword(email, password)
+        console.log('User logged-in successfully!')
+            .then(() => this.props.navigation.navigate('menu'))
+            .catch(error => console.log(error))
     }
 
     signOut = () => {
         firebase.auth()
-        .signOut()
-        .then(() => this.props.navigation.navigate('login'))
-        .catch(error => console.log(error))
+            .signOut()
+            .then(() => this.props.navigation.navigate('login'))
+            .catch(error => console.log(error))
     }
 
-    render(){
-        return(
+
+
+    render() {
+        this.state = {
+            displayName: firebase.auth().currentUser.displayName,
+            uid: firebase.auth().currentUser.uid
+        }
+        return (
             <View style={styles.container}>
 
                 <Text style={styles.headertext}>Login to your account:</Text>
 
-                <TextInput 
-                    style={styles.inputBox} 
+                <Text style={styles.textStyle}>
+                    Hello, {this.state.displayName}
+                </Text>
+                <TextInput
+                    style={styles.inputBox}
                     value={this.state.email}
-                    onChangeText={email=> this.setState({email})}
+                    onChangeText={email => this.setState({ email })}
                     placeholder='Email'
-                    autoCapitalize='none'> 
+                    autoCapitalize='none'
+                    autocomplete="email" >
                 </TextInput>
 
-                
-                <TextInput 
-                    style={styles.inputBox} 
+
+                <TextInput
+                    style={styles.inputBox}
                     value={this.state.password}
-                    onChangeText={password=> this.setState({password})}
+                    onChangeText={password => this.setState({ password })}
                     placeholder='Password'
-                    secureTextEntry={true}> 
+                    secureTextEntry={true}>
                 </TextInput>
 
                 <Pressable style={styles.button} onPress={this.signIn}>
-                    <Text style={styles.buttonText}>Login</Text>
+                    <Text style={styles.loginButtonText}>Login</Text>
                 </Pressable>
 
                 <Pressable style={styles.button} onPress={this.signOut}>
-                    <Text style={styles.buttonText}>Sign Out</Text>
+                    <Text style={styles.loginButtonText}>Sign Out</Text>
                 </Pressable>
 
-                <Button title="Dont have an account yet? Create one!"
+                <Button title="Don't have an account yet? Create one!"
                 onPress={() => this.props.navigation.navigate('signup')}
                 ></Button>
             </View>

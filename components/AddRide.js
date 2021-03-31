@@ -43,7 +43,7 @@ export default class AddRide extends React.Component {
 
                 <Text style={styles.headertext}>Enter new ride information:</Text>
 
-                <Text>Driver name</Text>
+                <Text style={styles.infotext}>Driver name</Text>
 
                 <TextInput 
                     style={styles.inputBox} 
@@ -53,9 +53,21 @@ export default class AddRide extends React.Component {
                     autoCapitalize='none'> 
                 </TextInput>
 
-                {/* <TextInput placeholder="enter your name..."></TextInput> */}
+                <Text style={styles.infotext}>Mobile number</Text>
 
-                <Text>Enter Time </Text>
+                <TextInput 
+                    style={styles.inputBox} 
+                    value={this.state.name}
+                    onChangeText={name=> this.setState({name})}
+                    placeholder='enter your mobile number...'
+                    autoCapitalize='none'
+                    autocomplete="tel">
+                    
+                </TextInput>
+
+                
+
+                <Text style={styles.infotext}>Enter Time </Text>
 
                 <TextInput 
                     style={styles.inputBox} 
@@ -63,13 +75,14 @@ export default class AddRide extends React.Component {
                     onChangeText={time=> this.setState({time})}
                     placeholder='enter time...'
                     autoCapitalize='none'
-                    keyboardType="decimal-pad"> 
+                    keyboardType="decimal-pad"
+                    type="time"> 
                 </TextInput>
 
-                {/* <TextInput placeholder="enter time..." keyboardType="decimal-pad"></TextInput> */}
+                
 
 
-                <Text>Select date </Text>
+                <Text style={styles.infotext}>Select date </Text>
                 <Calendar
                 onChange={(date)=> this.setState({date})}
                 selected={this.state.date}
