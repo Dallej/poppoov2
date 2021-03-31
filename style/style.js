@@ -5,7 +5,7 @@ export default StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: '#2C2F33',
+    backgroundColor: '#1c1c1c',
     alignItems: 'center',
     justifyContent: 'center'
   },
@@ -14,25 +14,31 @@ export default StyleSheet.create({
     margin: 10,
     padding: 15,
     fontSize: 16,
-    borderColor: '#d3d3d3',
-    borderBottomWidth: 1,
+    backgroundColor: '#292929',
+    color: '#fff',
+    // borderColor: '#d3d3d3',
+    // borderBottomWidth: 1,
     textAlign: 'center'
   },
   button: {
-    marginTop: 30,
-    marginBottom: 20,
+    marginTop: 10,
+    marginBottom: 10,
     paddingVertical: 5,
     alignItems: 'center',
-    backgroundColor: '#132639',
-    borderColor: '#8DB4CF',
+    backgroundColor: '#92ccde',
+    borderColor: '#92ccde',
     borderWidth: 1,
     borderRadius: 5,
-    width: 200
+    width: 150,
   },
   buttonText: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
-    color: '#fff',
+    color: '#292929',
+  },
+  loginButtonText: {
+    color: '#292929',
+    fontWeight: 'bold',
   },
   buttonSignup: {
     fontSize: 12
@@ -53,7 +59,8 @@ export default StyleSheet.create({
   },
   headertext:{
     fontSize:20,
-    marginBottom:10
+    marginBottom:10,
+    color: '#fff'
   },
   
 
@@ -90,15 +97,16 @@ export default StyleSheet.create({
     marginTop: 30,
   
   },
+
   IconButton: {
-    
-    paddingVertical: 5,
+    paddingVertical: 13,
     alignItems: 'center',
-    backgroundColor: '#3C4152',
-    borderColor: '#3C4152',
+    backgroundColor: '#92ccde',
+    borderColor: '#92ccde',
     borderWidth: 1,
     borderRadius: 5,
     width: 200,
+    
   },
   menuButtons:{
     marginTop: 10,
@@ -110,6 +118,7 @@ export default StyleSheet.create({
     backgroundColor: '#abc9de',
     padding: 100,
   },
+  
 
 
 });
