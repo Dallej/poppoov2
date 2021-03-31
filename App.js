@@ -9,6 +9,7 @@ import AddRide from './components/AddRide'
 import Rides from './components/Rides'
 import Login from './components/Login'
 
+
 import {NavigationContainer} from '@react-navigation/native'
 import {createStackNavigator} from '@react-navigation/stack'
 import Info from './components/Info';
@@ -31,14 +32,14 @@ export default class App extends React.Component {
 
     <NavigationContainer >
         <Stack.Navigator initialRouteName="Menu">
-          <Stack.Screen name="menu" component={Menu}
+          <Stack.Screen name="menu"  component={Menu}
           options={{
             headerShown: false,
             title:"OAMK poppoo",
             headerTitle:"OAMK poppoo", 
             headerTintColor: '#fff',
             headerStyle: {
-              backgroundColor: '#3C4152',
+              backgroundColor: '#292929',
             }
           }}
           >
@@ -50,7 +51,7 @@ export default class App extends React.Component {
             headerTitle:"Available rides",
             headerTintColor: '#fff',
             headerStyle: {
-              backgroundColor: '#3C4152',
+              backgroundColor: '#292929',
             }
           }}
           >
@@ -62,7 +63,7 @@ export default class App extends React.Component {
             headerTitle:"Offer a ride",
             headerTintColor: '#fff',
             headerStyle: {
-              backgroundColor: '#3C4152',
+              backgroundColor: '#292929',
             }
           }}
           >
@@ -74,7 +75,7 @@ export default class App extends React.Component {
             headerTitle:"Info",
             headerTintColor: '#fff',
             headerStyle: {
-              backgroundColor: '#3C4152',
+              backgroundColor: '#292929',
             }
           }}
           >
@@ -86,7 +87,7 @@ export default class App extends React.Component {
             headerTitle:"Login",
             headerTintColor: '#fff',
             headerStyle: {
-              backgroundColor: '#3C4152',
+              backgroundColor: '#292929',
             }
           }}
           >
@@ -98,7 +99,7 @@ export default class App extends React.Component {
             headerTitle:"Signup",
             headerTintColor: '#fff',
             headerStyle: {
-              backgroundColor: '#3C4152',
+              backgroundColor: '#292929',
             }
           }}
           >
@@ -106,9 +107,10 @@ export default class App extends React.Component {
 
         </Stack.Navigator>
     </NavigationContainer>
-    
   );
+
 }
+
 }
 
 

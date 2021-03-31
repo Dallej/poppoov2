@@ -33,10 +33,10 @@ export default class Login extends React.Component {
 
 
     render() {
-        this.state = {
-            displayName: firebase.auth().currentUser.displayName,
-            uid: firebase.auth().currentUser.uid
-        }
+        // this.state = {
+        //     displayName: firebase.auth().currentUser.displayName,
+        //     uid: firebase.auth().currentUser.uid
+        // }
         return (
             <View style={styles.container}>
 
@@ -64,15 +64,15 @@ export default class Login extends React.Component {
                 </TextInput>
 
                 <Pressable style={styles.button} onPress={this.signIn}>
-                    <Text style={styles.buttonText}>Login</Text>
+                    <Text style={styles.loginButtonText}>Login</Text>
                 </Pressable>
 
                 <Pressable style={styles.button} onPress={this.signOut}>
-                    <Text style={styles.buttonText}>Sign Out</Text>
+                    <Text style={styles.loginButtonText}>Sign Out</Text>
                 </Pressable>
 
-                <Button title="Dont have an account yet? Create one!"
-                    onPress={() => this.props.navigation.navigate('signup')}
+                <Button title="Don't have an account yet? Create one!"
+                onPress={() => this.props.navigation.navigate('signup')}
                 ></Button>
             </View>
         )
