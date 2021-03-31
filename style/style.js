@@ -9,6 +9,20 @@ export default StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  footer: {
+    marginBottom: -150,
+    marginTop: 50,
+    flexDirection: 'row',
+    width: "100%",
+    height: 70,
+    padding: 20
+  },
+  footerText: {
+  width: "100%",
+  textAlign: "center",
+  color: "#fff",
+  marginLeft: 90
+  },
   inputBox: {
     width: '20%',
     margin: 10,
@@ -34,7 +48,8 @@ export default StyleSheet.create({
   buttonText: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#292929',
+    color: '#121212',
+    fontFamily: "Avenir-Medium"
   },
   loginButtonText: {
     color: '#292929',
@@ -117,12 +132,23 @@ export default StyleSheet.create({
   IconButton: {
     paddingVertical: 13,
     alignItems: 'center',
-    backgroundColor: '#F1C11A',
-    borderColor: '#F1C11A',
-    borderWidth: 1,
-    borderRadius: 5,
+    backgroundColor: '#3b3b3b',
+    borderColor: '#474747',
+    borderWidth: 2,
+    borderRadius: 10,
     width: 200,
-    
+    margin: 10,
+  },
+  buttonMenuLogin: {
+    color: "#b88cb0",
+    fontSize: 21,
+    fontFamily: "Avenir-Medium"
+  },
+  buttonTextMenu: { 
+    fontSize: 18,
+    //fontWeight: 'bold',
+    color: '#fff',
+    fontFamily: "Thonburi"
   },
   menuButtons:{
     marginTop: 10,
