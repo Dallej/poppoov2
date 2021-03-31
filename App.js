@@ -33,6 +33,7 @@ export default class App extends React.Component {
         <Stack.Navigator initialRouteName="Menu">
           <Stack.Screen name="menu" component={Menu}
           options={{
+            headerShown: false,
             title:"OAMK poppoo",
             headerTitle:"OAMK poppoo", 
             headerTintColor: '#fff',
