@@ -32,8 +32,8 @@ export default class Login extends React.Component{
             <View style={styles.container}>
                     
                 <Image style={styles.logo} source={require("../img/OAMKlogo.png")}></Image>                
-           
-                {/* <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('rides')}>
+{/*            
+                <Pressable style={styles.button} onPress={() => this.props.navigation.navigate('rides')}>
                     <Text style={styles.buttonText}>Rides</Text>
                 </Pressable>
               
@@ -49,29 +49,29 @@ export default class Login extends React.Component{
                     <Text style={styles.buttonText}>About</Text>
                 </Pressable> */}
 
-
+                <View style={styles.menuButtons}>
                 <Icon.Button name="group" style={styles.IconButton} onPress={() => this.props.navigation.navigate('rides')}>
                     <Text style={styles.buttonText}>Rides</Text>
                 </Icon.Button>
+                </View>
 
-                <br />
-
-                <Icon.Button name="car" style={styles.IconButton} onPress={() => this.props.navigation.navigate('addride')}>
+                <View style={styles.menuButtons}>
+                <Icon.Button name="car" style={styles.IconButton} onPress={() => this.props.navigation.navigate('login')}>
                     <Text style={styles.buttonText}>Offer a Ride</Text>
                 </Icon.Button>
+                </View>
 
-                <br />
-
+                <View style={styles.menuButtons}>
                 <Icon.Button name="user" style={styles.IconButton} onPress={() => this.props.navigation.navigate('login')}>
                     <Text style={styles.buttonText}>Sign in</Text>
                 </Icon.Button>
+                </View>
 
-                <br />
-
+                <View style={styles.menuButtons}>
                 <Icon.Button name="info" style={styles.IconButton} onPress={() => this.props.navigation.navigate('info')}>
                     <Text style={styles.buttonText}>About</Text>
                 </Icon.Button>
-
+                </View>
                
             </View>
         )

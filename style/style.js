@@ -100,11 +100,16 @@ export default StyleSheet.create({
     borderRadius: 5,
     width: 200,
   },
+  menuButtons:{
+    marginTop: 10,
+    marginBottom: 10,
+  },
   modal: {
     flex: 1,
     alignItems: 'center',
     backgroundColor: '#abc9de',
     padding: 100,
-  }
+  },
+
 
 });
