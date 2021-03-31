@@ -10,13 +10,14 @@ export default StyleSheet.create({
     justifyContent: 'center'
   },
   inputBox: {
-    width: '85%',
+    width: '20%',
     margin: 10,
     padding: 15,
     fontSize: 16,
     borderColor: '#d3d3d3',
     borderBottomWidth: 1,
-    textAlign: 'center'
+    textAlign: 'center',
+
   },
   button: {
     marginTop: 30,
@@ -53,10 +54,13 @@ export default StyleSheet.create({
   },
   headertext:{
     fontSize:20,
-    marginBottom:10
+    marginBottom:10,
+    color:"#fff"
   },
-  
-
+  infotext:{
+    color:"#fff",
+    fontSize:18
+  },
   cardbox: {
     paddingTop: 20,
     paddingBottom: 20,
