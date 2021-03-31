@@ -29,6 +29,10 @@ export default class App extends React.Component {
           options={{
             title:"OAMK poppoo",
             headerTitle:"OAMK poppoo", 
+            headerTintColor: '#fff',
+            headerStyle: {
+              backgroundColor: '#3C4152',
+            }
           }}
           >
           </Stack.Screen>

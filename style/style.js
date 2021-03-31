@@ -5,7 +5,7 @@ export default StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#2C2F33',
     alignItems: 'center',
     justifyContent: 'center'
   },
@@ -23,7 +23,7 @@ export default StyleSheet.create({
     marginBottom: 20,
     paddingVertical: 5,
     alignItems: 'center',
-    backgroundColor: '#8DB4CF',
+    backgroundColor: '#132639',
     borderColor: '#8DB4CF',
     borderWidth: 1,
     borderRadius: 5,
@@ -55,6 +55,8 @@ export default StyleSheet.create({
     fontSize:20,
     marginBottom:10
   },
+  
+
   cardbox: {
     paddingTop: 20,
     paddingBottom: 20,
@@ -92,8 +94,8 @@ export default StyleSheet.create({
     
     paddingVertical: 5,
     alignItems: 'center',
-    backgroundColor: '#8DB4CF',
-    borderColor: '#8DB4CF',
+    backgroundColor: '#3C4152',
+    borderColor: '#3C4152',
     borderWidth: 1,
     borderRadius: 5,
     width: 200,
