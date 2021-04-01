@@ -24,7 +24,7 @@ export default StyleSheet.create({
   width: "100%",
   textAlign: "center",
   color: "#fff",
-  marginLeft: 90
+  marginLeft: 95
   },
   inputBox: {
     width: '75%',
