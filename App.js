@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native'
 import {firebase} from './firebase/Config'
 
+
 import styles from './style/style'
 import Menu from './components/Menu'
 import AddRide from './components/AddRide'
