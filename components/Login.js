@@ -18,7 +18,13 @@ export default class Login extends React.Component {
         const { email, password } = this.state
         firebase.auth()
             .signInWithEmailAndPassword(email, password)
-        console.log('User logged-in successfully!')
+            .then((userCredential) => {
+                // Signed in
+                var user = userCredential.user;
+                alert("logged-in successfully ")
+                console.log('User logged-in successfully!')
+                // ...
+              })
             .then(() => this.props.navigation.navigate('menu'))
             .catch(error => console.log(error))
     }
@@ -52,7 +58,9 @@ export default class Login extends React.Component {
                     placeholder='Email'
                     placeholderTextColor="#fff"
                     autoCapitalize='none'
-                    autocomplete="email" >
+                    autocomplete="email" 
+                    keyboardType="email-address">
+                        
                 </TextInput>
 
 
