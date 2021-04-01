@@ -37,11 +37,12 @@ export default class Rides extends React.Component {
 
                         <View style={styles.modal}>
                         <Text style={{fontSize: 30, marginBottom: 30, color: "#fff"}}> Minna's ride </Text>
-                            <Text style={styles.buttonText}> ___ Ride </Text>
-                            <Text style={styles.buttonText}> ___ to ___ </Text>
-                            <Text style={styles.buttonText}> d a t e </Text>
-                            <Text style={styles.buttonText}> Departure: </Text>
-                            <Text style={styles.buttonText}> Seats left: </Text>
+                            <Text style={styles.modalText}> Drivers name </Text>
+                            <Text style={styles.modalText}> Oulainen to Oulu </Text>
+                            <Text style={styles.modalText}> Mobile number:  </Text>
+                            <Text style={styles.modalText}> date:  </Text>
+                            <Text style={styles.modalText}> Departure: time</Text>
+                            <Text style={styles.modalText}> Seats left: </Text>
 
                             <Pressable style={styles.buttonModal} onPress={() => {
                                 this.toggleModal(!this.state.modalVisible)}}>
