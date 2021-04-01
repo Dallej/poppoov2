@@ -6,8 +6,11 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1c1c1c',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'center'
+    
+  },
+  centerpadding:{
+  paddingTop:200
   },
   footer: {
     marginBottom: -150,

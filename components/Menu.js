@@ -37,7 +37,7 @@ export default class Login extends React.Component{
     render(){
         return(
             
-            <View style={styles.container}>
+            <View style={[styles.container,styles.centerpadding]}>
                     
                 <Image style={styles.logo} source={require("../img/POPPOO.png")}></Image>                
 
