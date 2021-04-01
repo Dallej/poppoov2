@@ -56,7 +56,7 @@ export default class Login extends React.Component {
                     value={this.state.email}
                     onChangeText={email => this.setState({ email })}
                     placeholder='Email'
-                    placeholderTextColor="#fff"
+                    placeholderTextColor="#b8b8b8"
                     autoCapitalize='none'
                     autocomplete="email" 
                     keyboardType="email-address">
@@ -69,7 +69,7 @@ export default class Login extends React.Component {
                     value={this.state.password}
                     onChangeText={password => this.setState({ password })}
                     placeholder='Password'
-                    placeholderTextColor="#fff"
+                    placeholderTextColor="#b8b8b8"
                     secureTextEntry={true}>
                 </TextInput>
 

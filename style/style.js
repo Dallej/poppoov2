@@ -87,11 +87,11 @@ export default StyleSheet.create({
   cardbox: {
     paddingTop: 20,
     paddingBottom: 20,
-    backgroundColor: "#8DB4CF",
+    backgroundColor: "#808080",
     borderRadius: 10,
     borderWidth: 1,
     borderColor: "#000000",
-    margin: 20,
+    margin: 10,
     width: 190,
     height: 160,
     textAlign: "center",
@@ -107,10 +107,11 @@ export default StyleSheet.create({
     fontSize: 17,
     fontWeight: 'bold',
     color: '#000',
-    marginLeft: 10
+    marginLeft: 10,
+    margin: 10
   },
   cardButton:{
-    backgroundColor: '#abc9de',
+    backgroundColor: '#666666',
     borderColor: '#000',
     borderTopWidth:1,
     height:30,
@@ -160,7 +161,7 @@ export default StyleSheet.create({
   modal: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#abc9de',
+    backgroundColor: '#1c1c1c',
     padding: 100,
   },
   textStyle: {

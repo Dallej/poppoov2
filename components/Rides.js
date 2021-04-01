@@ -1,4 +1,3 @@
-import { Poppins_600SemiBold } from '@expo-google-fonts/poppins';
 import React, { useState } from 'react';
 import { View, TextInput, Pressable, Text, Modal, TouchableHighlight } from 'react-native'
 import { firebase, ROOT_REF } from '../firebase/Config'
@@ -29,7 +28,7 @@ export default class Rides extends React.Component {
         return (
             <View style={styles.container}>
 
-                <Text style={{ fontWeight: "bold", fontSize: 20, color: "#fff", fontFamily: Poppins-SemiBold}}> My current rides </Text>
+                <Text style={{ fontWeight: "bold", fontSize: 20, color: "#fff", margin: 20 }}> My current rides </Text>
 
                  {/* MODAL */}
                     <Modal animationType={"slide"} transparent={false}
@@ -37,10 +36,10 @@ export default class Rides extends React.Component {
                         onRequestClose={() => { console.log("Modal has been closed.") }}>
 
                         <View style={styles.modal}>
-                        <Text style={{fontSize: 30, marginBottom: 30, fontFamily: Poppins_600SemiBold}}> Minna's ride </Text>
+                        <Text style={{fontSize: 30, marginBottom: 30, color: "#fff"}}> Minna's ride </Text>
                             <Text style={styles.buttonText}> ___ Ride </Text>
                             <Text style={styles.buttonText}> ___ to ___ </Text>
-                            <Text style={styles.cardboxText}> d a t e </Text>
+                            <Text style={styles.buttonText}> d a t e </Text>
                             <Text style={styles.buttonText}> Departure: </Text>
                             <Text style={styles.buttonText}> Seats left: </Text>
 
@@ -84,7 +83,7 @@ export default class Rides extends React.Component {
                     </View>
                 </View>
 
-                <Text style={{ fontWeight: "bold", fontSize: 20, color: "#fff" }}>Join available rides</Text>
+                <Text style={{ fontWeight: "bold", fontSize: 20, color: "#fff", margin: 20 }}>Join available rides</Text>
 
                 {/* Add filter for destination here */}
 

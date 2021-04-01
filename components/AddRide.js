@@ -50,6 +50,7 @@ export default class AddRide extends React.Component {
                     value={this.state.name}
                     onChangeText={name=> this.setState({name})}
                     placeholder='enter your name...'
+                    placeholderTextColor="#b8b8b8"
                     autoCapitalize='none'> 
                 </TextInput>
 
@@ -60,6 +61,7 @@ export default class AddRide extends React.Component {
                     value={this.state.name}
                     onChangeText={name=> this.setState({name})}
                     placeholder='enter your mobile number...'
+                    placeholderTextColor="#b8b8b8"
                     autoCapitalize='none'
                     autocomplete="tel">
                     
@@ -74,6 +76,7 @@ export default class AddRide extends React.Component {
                     value={this.state.time}
                     onChangeText={time=> this.setState({time})}
                     placeholder='enter time...'
+                    placeholderTextColor="#b8b8b8"
                     autoCapitalize='none'
                     keyboardType="decimal-pad"
                     type="time"> 
