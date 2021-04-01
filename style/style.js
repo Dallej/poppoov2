@@ -164,6 +164,11 @@ export default StyleSheet.create({
     backgroundColor: '#1c1c1c',
     padding: 100,
   },
+  modalText: {
+    color: "#b8b8b8",
+    margin: 7,
+    fontSize: 21,
+  },
   textStyle: {
     color: "#fff"
   }
