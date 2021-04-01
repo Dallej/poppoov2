@@ -23,9 +23,12 @@ export default class Signup extends React.Component{
         .then(() => firebase.database().ref(ROOT_REF).push({
             name: name,
             email:email
-        
+
+            
         }))
-        .then(() => this.props.navigation.navigate('menu'))
+        .then(() => {
+            alert("Signup successfull!")
+            this.props.navigation.navigate('menu')})
         .catch(error => console.log(error))
     }
 
