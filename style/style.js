@@ -27,7 +27,7 @@ export default StyleSheet.create({
   marginLeft: 90
   },
   inputBox: {
-    width: '20%',
+    width: '50%',
     margin: 10,
     padding: 15,
     fontSize: 16,
@@ -42,8 +42,8 @@ export default StyleSheet.create({
     marginBottom: 10,
     paddingVertical: 5,
     alignItems: 'center',
-    backgroundColor: '#F1C11A',
-    borderColor: '#F1C11A',
+    backgroundColor: '#3b3b3b',
+    borderColor: '#474747',
     borderWidth: 1,
     borderRadius: 5,
     width: 150,
@@ -51,11 +51,11 @@ export default StyleSheet.create({
   buttonText: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: '#121212',
+    color: '#fff',
     fontFamily: "Avenir-Medium"
   },
   loginButtonText: {
-    color: '#292929',
+    color: '#fff',
     fontWeight: 'bold',
   },
   buttonSignup: {
@@ -143,7 +143,7 @@ export default StyleSheet.create({
     margin: 10,
   },
   buttonMenuLogin: {
-    color: "#b88cb0",
+    color: "#5da3b3",
     fontSize: 21,
     fontFamily: "Avenir-Medium"
   },
@@ -163,6 +163,9 @@ export default StyleSheet.create({
     backgroundColor: '#abc9de',
     padding: 100,
   },
+  textStyle: {
+    color: "#fff"
+  }
   
 
 
