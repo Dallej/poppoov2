@@ -6,7 +6,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1c1c1c',
-    alignItems: 'center'
+    alignItems: 'center',
     
   },
   centerpadding:{
@@ -27,7 +27,7 @@ export default StyleSheet.create({
   marginLeft: 90
   },
   inputBox: {
-    width: '50%',
+    width: '75%',
     margin: 10,
     padding: 15,
     fontSize: 16,

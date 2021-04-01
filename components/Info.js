@@ -17,7 +17,7 @@ export default class Info extends React.Component{
 
     render(){
         return(
-            <View style={styles.container}>
+            <View style={[styles.container,styles.centerpadding]}>
                 <Image style={styles.logo} source={require("../img/OAMKlogo.png")}></Image> 
                 
                 <Text style={{fontWeight: "bold", color: "#fff"}}>OAMK Oulu pickup location</Text>
