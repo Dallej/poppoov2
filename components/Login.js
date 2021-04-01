@@ -11,6 +11,7 @@ export default class Login extends React.Component {
         this.state = {
             email: '',
             password: ''
+            
         }
     }
 
@@ -21,7 +22,8 @@ export default class Login extends React.Component {
             .then((userCredential) => {
                 // Signed in
                 var user = userCredential.user;
-                alert("logged-in successfully ")
+                var name = user.displayName;
+                alert("Logged-in successfully "+ {name})
                 console.log('User logged-in successfully!')
                 // ...
               })
@@ -29,13 +31,15 @@ export default class Login extends React.Component {
             .catch(error => console.log(error))
     }
 
-    signOut = () => {
-        firebase.auth()
-            .signOut()
-            .then(() => this.props.navigation.navigate('login'))
+    signOut = () => {firebase.auth().signOut()
+            .then(() => {
+                alert("Sign-out successful.")
+                this.props.navigation.navigate('login')}
+                )
             .catch(error => console.log(error))
     }
 
+    
 
 
     render() {
