@@ -4,7 +4,9 @@ import { firebase, ROOT_REF } from '../firebase/Config'
 import styles from '../style/style'
 
 
-export default class Info extends React.Component {
+
+
+export default class Info extends React.Component{
 
     constructor() {
         super();

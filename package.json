@@ -7,8 +7,10 @@
     "web": "expo start --web",
     "eject": "expo eject"
   },
-  "rnpm" : {
-    "assets" : ["assets/fonts"]
+  "rnpm": {
+    "assets": [
+      "assets/fonts"
+    ]
   },
   "dependencies": {
     "@expo-google-fonts/poppins": "^0.1.0",
