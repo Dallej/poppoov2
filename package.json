@@ -13,6 +13,7 @@
     ]
   },
   "dependencies": {
+    "-": "^0.0.1",
     "@expo-google-fonts/poppins": "^0.1.0",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-native-picker/picker": "^1.12.0",
@@ -23,6 +24,7 @@
     "expo-font": "~8.4.0",
     "expo-status-bar": "~1.0.3",
     "firebase": "^8.2.9",
+    "force": "^0.0.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",

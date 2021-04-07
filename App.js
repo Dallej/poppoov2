@@ -36,7 +36,7 @@ export default class App extends React.Component {
 
   async _loadFontsAsync() {
     await Font.loadAsync({
-      'headline': require('../assets/fonts/Poppins-SemiBold.ttf'),
+      'headline': require('./assets/fonts/Poppins-SemiBold.ttf'),
     });
     this.setState({ fontsLoaded: true });
   }
