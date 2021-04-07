@@ -50,13 +50,10 @@ export default StyleSheet.create({
   },
   buttonText: {
     fontSize: 18,
-    fontWeight: 'bold',
-    color: '#fff',
-    fontFamily: "Avenir-Medium"
+    color: '#fff'
   },
   loginButtonText: {
     color: '#fff',
-    fontWeight: 'bold',
   },
   buttonSignup: {
     fontSize: 12
@@ -99,13 +96,11 @@ export default StyleSheet.create({
   },
   cardboxText: {
     fontSize: 14,
-    fontWeight: 'bold',
     color: '#000',
     marginLeft: 10
   },
   cardboxHeader: {
     fontSize: 17,
-    fontWeight: 'bold',
     color: '#000',
     marginLeft: 10,
     margin: 10
@@ -146,13 +141,11 @@ export default StyleSheet.create({
   buttonMenuLogin: {
     color: "#5da3b3",
     fontSize: 21,
-    fontFamily: "Avenir-Medium"
   },
   buttonTextMenu: { 
     fontSize: 18,
     //fontWeight: 'bold',
-    color: '#fff',
-    fontFamily: "Thonburi"
+    color: '#fff'
   },
   menuButtons:{
     marginTop: 10,
