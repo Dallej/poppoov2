@@ -171,7 +171,12 @@ export default StyleSheet.create({
   },
   textStyle: {
     color: "#fff"
-  }
+  },
+  headline: {
+    fontSize: 35,
+    color: "black",
+    fontFamily: "headline"
+  },
   
 
 

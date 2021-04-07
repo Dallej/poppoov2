@@ -2,7 +2,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native'
 import {firebase} from './firebase/Config'
-
+import { AppLoading } from 'expo';
+import * as Font from 'expo-font';
 
 import styles from './style/style'
 import Menu from './components/Menu'
@@ -26,8 +27,26 @@ if (user) {
 
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      fontsLoaded: false,
+    };
+  }
+
+  async _loadFontsAsync() {
+    await Font.loadAsync({
+      'headline': require('../assets/fonts/Poppins-SemiBold.ttf'),
+    });
+    this.setState({ fontsLoaded: true });
+  }
+
+  componentDidMount() {
+    this._loadFontsAsync();
+  }
+
   render(){
-  
+    if (this.state.fontsLoaded) {
   
   return (
 
@@ -110,8 +129,10 @@ export default class App extends React.Component {
     </NavigationContainer>
   );
 
-}
-
-}
-
+    }
+    else {
+      return <AppLoading />;
+    }
+  }
+};
 
