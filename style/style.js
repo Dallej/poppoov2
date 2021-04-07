@@ -139,7 +139,7 @@ export default StyleSheet.create({
     margin: 10,
   },
   buttonMenuLogin: {
-    color: "#5da3b3",
+    color: "#3385ff",
     fontSize: 21,
   },
   buttonTextMenu: { 
