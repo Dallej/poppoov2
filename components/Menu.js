@@ -5,6 +5,7 @@ import {firebase} from '../firebase/Config';
 import styles from '../style/style';
 import ToggleSwitch from 'toggle-switch-react-native';
 
+
 // import {OAMKlogo} from '../img/OAMKlogo'
 
 
