@@ -61,7 +61,7 @@ export default class Login extends React.Component{
                 
                 <View style={styles.menuButtons}>
                 <Pressable onPress={() => this.props.navigation.navigate('login')}>
-                    <Text style={styles.buttonMenuLogin}>LOG IN</Text>
+                    <Text style={styles.buttonMenuLogin}>Login</Text>
                 </Pressable>
                 </View>
 
@@ -85,7 +85,6 @@ export default class Login extends React.Component{
                 
               </View>
               
-             
         )
     }
 
