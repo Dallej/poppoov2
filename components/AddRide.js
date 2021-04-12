@@ -3,11 +3,12 @@ import {View, Pressable, Text, TextInput,TouchableWithoutFeedback} from 'react-n
 import Calendar from 'react-native-calendar-datepicker';
 import Moment from 'moment';
 
-import {firebase} from '../firebase/Config'
+import {firebase, RIDES} from '../firebase/Config'
 require('firebase/auth')
 
 import styles from '../style/style'
 import {Keyboard} from 'react-native'
+import Rides from './Rides';
 
 
 
@@ -28,14 +29,13 @@ export default class AddRide extends React.Component {
 
     
       AddToDatabase = () => {
-        const {name,time,date} = this.state
-        firebase.auth()
-        .then(() => firebase.database().ref(ROOT_REF).push({
+        const {name,time,date,mobile} = this.state
+        firebase.database().ref('/rides').push({
             name: name,
             time:time,
             mobile:mobile
-        }))
-        .then(() => this.props.navigation.navigate('rides'))
+        })
+        // .then(() => this.props.navigation.navigate('rides'))
         .catch(error => console.log(error))
      } 
 

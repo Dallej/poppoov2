@@ -46,7 +46,7 @@ export default class App extends React.Component {
   }
 
   render(){
-    if (this.state.fontsLoaded) {
+    
   
   return (
 
@@ -129,10 +129,7 @@ export default class App extends React.Component {
     </NavigationContainer>
   );
 
-    }
-    else {
-      return <AppLoading />;
-    }
+  
   }
 };
 

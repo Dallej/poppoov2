@@ -18,4 +18,5 @@ if (!firebase.apps.length){
 }
 
 export const ROOT_REF ='/users'
+export const RIDES ='/rides'
 export {firebase};
