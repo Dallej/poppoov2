@@ -41,7 +41,7 @@ export default class Login extends React.Component{
             <View style={[styles.container,styles.centerpadding]}>
                     
                 <Image style={styles.logo} source={require("../img/POPPOO.png")}></Image>                
-
+                
                 <View style={styles.menuButtons}>
                 <Pressable style={styles.IconButton} onPress={() => this.props.navigation.navigate('rides')}>
                     <Text style={styles.buttonTextMenu}>View rides</Text>
@@ -67,7 +67,8 @@ export default class Login extends React.Component{
 
                 <View style={styles.footer}>
                   {/* <Text style={styles.footerText}>THIS IS THE FOOTER</Text> */}
-                    <View style={styles.footerText}>
+
+                  {/*   <View style={styles.footerText}>
                     
                         <ToggleSwitch
                         label="English"
@@ -80,7 +81,7 @@ export default class Login extends React.Component{
                         }}
                         />
                         <Text style={{ color: "#81c5c7", fontWeight: "500", marginLeft: 125, marginTop: -20 }}>Finnish</Text>
-                    </View>
+                    </View> */}
                 </View>
                 
               </View>

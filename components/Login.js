@@ -3,32 +3,40 @@ import { View, TextInput, Pressable, Text, Button } from 'react-native'
 import { firebase } from '../firebase/Config'
 import styles from '../style/style'
 
+const user = firebase.auth().currentUser;
 
 export default class Login extends React.Component {
 
+
+    
     constructor() {
         super();
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            
             
         }
     }
 
     signIn = () => {
-        const { email, password } = this.state
+        const { email, password} = this.state
         firebase.auth()
             .signInWithEmailAndPassword(email, password)
             .then((userCredential) => {
                 // Signed in
                 var user = userCredential.user;
                 var name = user.displayName;
-                alert("Logged-in successfully "+ {name})
-                console.log('User logged-in successfully!')
+                alert("Logged-in successfully", "test")
+                console.log('User logged-in successfully!', {email})
                 // ...
               })
             .then(() => this.props.navigation.navigate('menu'))
             .catch(error => console.log(error))
+
+            user.providerData.forEach((userInfo) => {
+                console.log('User info for provider: ', userInfo);
+              });
     }
 
     signOut = () => {firebase.auth().signOut()
