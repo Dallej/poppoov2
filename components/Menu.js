@@ -3,7 +3,7 @@ import {View, TextInput, Pressable, Text, Button,Image, Platform} from 'react-na
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {firebase} from '../firebase/Config';
 import styles from '../style/style';
-import ToggleSwitch from 'toggle-switch-react-native';
+// import ToggleSwitch from 'toggle-switch-react-native';
 
 
 // import {OAMKlogo} from '../img/OAMKlogo'
@@ -11,13 +11,13 @@ import ToggleSwitch from 'toggle-switch-react-native';
 
 export default class Login extends React.Component{
 
-    state = {
-        isOnToggleSwitch: false
-      };
+    // state = {
+    //     isOnToggleSwitch: false
+    //   };
 
-      onToggle(isOn) {
-        console.log("Changed to " + isOn);
-      }
+    //   onToggle(isOn) {
+    //     console.log("Changed to " + isOn);
+    //   }
 
     constructor(){
         super();
@@ -69,7 +69,7 @@ export default class Login extends React.Component{
                   {/* <Text style={styles.footerText}>THIS IS THE FOOTER</Text> */}
                     <View style={styles.footerText}>
                     
-                        <ToggleSwitch
+                        {/* <ToggleSwitch
                         label="English"
                         onColor="#81c5c7"
                         labelStyle={{ color: "#fff", fontWeight: "500" }}
@@ -78,8 +78,8 @@ export default class Login extends React.Component{
                             this.setState({ isOnToggleSwitch });
                             this.onToggle(isOnToggleSwitch);
                         }}
-                        />
-                        <Text style={{ color: "#81c5c7", fontWeight: "500", marginLeft: 125, marginTop: -20 }}>Finnish</Text>
+                        /> */}
+                        {/* <Text style={{ color: "#81c5c7", fontWeight: "500", marginLeft: 125, marginTop: -20 }}>Finnish</Text> */}
                     </View>
                 </View>
                 
