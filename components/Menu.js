@@ -83,6 +83,8 @@ export default class Menu extends React.Component{
                         /> */}
                         {/* <Text style={{ color: "#81c5c7", fontWeight: "500", marginLeft: 125, marginTop: -20 }}>Finnish</Text>
                     </View>*/}
+
+                </View>
                 </View>
                 </View>
                 
