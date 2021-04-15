@@ -30,12 +30,11 @@ export default StyleSheet.create({
     width: '75%',
     margin: 10,
     padding: 15,
-    fontSize: 16,
-    backgroundColor: '#292929',
+    fontSize: 14,
+    backgroundColor: '#EAEAEA',
     color: '#fff',
-    // borderColor: '#d3d3d3',
-    // borderBottomWidth: 1,
-    textAlign: 'center'
+    borderRadius: 5,
+    textAlign: 'left'
   },
   button: {
     marginTop: 10,
@@ -52,9 +51,24 @@ export default StyleSheet.create({
     fontSize: 18,
     color: '#fff'
   },
-  loginButtonText: {
-    color: '#fff',
+  loginButton:{
+    marginTop: 20,
+    marginBottom: 30,
+    paddingVertical: 5,
+    alignItems: 'center',
+    backgroundColor: '#3b3b3b',
+    borderColor: '#474747',
+    borderWidth: 1,
+    borderRadius: 5,
+    width: 150,
   },
+  loginButtonText: {
+    color: '#EAEAEA'
+    
+  },
+ createAccountButton: {
+   fontSize: 12
+ },
   buttonSignup: {
     fontSize: 12
   },
@@ -75,10 +89,12 @@ export default StyleSheet.create({
   headertext:{
     fontSize:20,
     marginBottom:10,
-    color:"#fff"
+    marginTop: 60,
+    color:"#EAEAEA",
+    
   },
   infotext:{
-    color:"#fff",
+    color:"#EAEAEA",
     fontSize:18
   },
   cardbox: {
@@ -145,7 +161,7 @@ export default StyleSheet.create({
   buttonTextMenu: { 
     fontSize: 18,
     //fontWeight: 'bold',
-    color: '#fff'
+    color: '#EAEAEA'
   },
   menuButtons:{
     marginTop: 10,
@@ -163,7 +179,7 @@ export default StyleSheet.create({
     fontSize: 21,
   },
   textStyle: {
-    color: "#fff"
+    color: "#EAEAEA"
   },
   headline: {
     fontSize: 35,
