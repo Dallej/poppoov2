@@ -3,6 +3,7 @@ import { block } from 'react-native-reanimated';
 
 export default StyleSheet.create({
 
+
   container: {
     flex: 1,
     backgroundColor: '#1c1c1c',
@@ -12,6 +13,8 @@ export default StyleSheet.create({
   centerpadding:{
   paddingTop:200
   },
+
+  //Footer styles
   footer: {
     marginBottom: -150,
     marginTop: 50,
@@ -51,6 +54,7 @@ export default StyleSheet.create({
     fontSize: 18,
     color: '#fff'
   },
+  //Login page 
   loginButton:{
     marginTop: 20,
     marginBottom: 30,
@@ -97,41 +101,52 @@ export default StyleSheet.create({
     color:"#EAEAEA",
     fontSize:18
   },
+
+
+  //Available rides page
+  ridesHeader: {
+    fontWeight: "500", 
+    fontSize: 20, 
+    color: "#EAEAEA", 
+    margin: 20
+  },
   cardbox: {
     paddingTop: 20,
-    paddingBottom: 20,
-    backgroundColor: "#808080",
+    backgroundColor: "#EAEAEA",
     borderRadius: 10,
     borderWidth: 1,
     borderColor: "#000000",
     margin: 10,
-    width: 190,
+    width: 160,
     height: 160,
     textAlign: "center",
     justifyContent: "center",
   },
   cardboxText: {
-    fontSize: 14,
+    fontSize: 13,
     color: '#000',
-    marginLeft: 10
+    textAlign: "left",
+    marginTop: 5
   },
-  cardboxHeader: {
-    fontSize: 17,
-    color: '#000',
-    marginLeft: 10,
-    margin: 10
+  cardboxButtonText: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#EAEAEA',
+    textAlign: 'center',
+    marginTop: 5
   },
   cardButton:{
-    backgroundColor: '#666666',
-    borderColor: '#000',
-    borderTopWidth:1,
+    backgroundColor: '#3b3b3b',
+    borderColor: '#474747',
+    borderWidth: 1,
     height:30,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
     marginTop: 30,
-    textAlign: "center"
-  
+    
   },
+
+  //Menu buttons
   buttonModal: {
     marginTop: 10,
     marginBottom: 10,
@@ -143,7 +158,6 @@ export default StyleSheet.create({
     borderRadius: 5,
     width: 150,
   },
-
   IconButton: {
     paddingVertical: 13,
     alignItems: 'center',
@@ -160,13 +174,15 @@ export default StyleSheet.create({
   },
   buttonTextMenu: { 
     fontSize: 18,
-    //fontWeight: 'bold',
-    color: '#EAEAEA'
+    color: '#EAEAEA',
   },
   menuButtons:{
     marginTop: 10,
     marginBottom: 10,
   },
+
+
+  //
   modal: {
     flex: 1,
     alignItems: 'center',
