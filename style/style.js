@@ -11,7 +11,7 @@ export default StyleSheet.create({
     
   },
   centerpadding:{
-  paddingTop:200
+    paddingTop:200
   },
 
   //Footer styles
