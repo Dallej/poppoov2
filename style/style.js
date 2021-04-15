@@ -10,7 +10,7 @@ export default StyleSheet.create({
     
   },
   centerpadding:{
-  paddingTop:200
+    paddingTop:200
   },
   footer: {
     marginBottom: -150,
