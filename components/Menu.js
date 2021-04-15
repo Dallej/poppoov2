@@ -80,8 +80,8 @@ export default class Login extends React.Component{
                             this.onToggle(isOnToggleSwitch);
                         }}
                         /> */}
-                        {/* <Text style={{ color: "#81c5c7", fontWeight: "500", marginLeft: 125, marginTop: -20 }}>Finnish</Text> */}
-                    </View>
+                        {/* <Text style={{ color: "#81c5c7", fontWeight: "500", marginLeft: 125, marginTop: -20 }}>Finnish</Text>
+                    </View>*/}
                 </View>
                 
               
