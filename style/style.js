@@ -78,7 +78,7 @@ export default StyleSheet.create({
     width: '75%',
     margin: 10,
     padding: 15,
-    fontSize: 14,
+    fontSize: 12,
     backgroundColor: '#EAEAEA',
     color: '#fff',
     borderRadius: 5,
@@ -93,7 +93,7 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   headertext:{
-    fontSize:20,
+    fontSize:15,
     marginBottom:40,
     marginTop: 60,
     color:"#EAEAEA",
@@ -101,7 +101,7 @@ export default StyleSheet.create({
   },
   infotext:{
     color:"#EAEAEA",
-    fontSize:18,
+    fontSize:14,
     textAlign: 'left',
   },
   inputBoxAddride: {
