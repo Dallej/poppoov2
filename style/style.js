@@ -131,11 +131,10 @@ export default StyleSheet.create({
     backgroundColor: "#EAEAEA",
     borderRadius: 5,
     marginTop: 10,
-    marginBottom: 20,
-    padding: 15,
     borderColor: '#474747',
     borderWidth: 2,
     borderRadius: 10,
+
   },
 
 
