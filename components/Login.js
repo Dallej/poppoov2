@@ -3,32 +3,40 @@ import { View, TextInput, Pressable, Text, Button } from 'react-native'
 import { firebase } from '../firebase/Config'
 import styles from '../style/style'
 
+const user = firebase.auth().currentUser;
 
 export default class Login extends React.Component {
 
+
+    
     constructor() {
         super();
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            
             
         }
     }
 
     signIn = () => {
-        const { email, password } = this.state
+        const { email, password} = this.state
         firebase.auth()
             .signInWithEmailAndPassword(email, password)
             .then((userCredential) => {
                 // Signed in
                 var user = userCredential.user;
                 var name = user.displayName;
-                alert("Logged-in successfully "+ {name})
-                console.log('User logged-in successfully!')
+                alert("Logged-in successfully", "test")
+                console.log('User logged-in successfully!', {email})
                 // ...
               })
             .then(() => this.props.navigation.navigate('menu'))
             .catch(error => console.log(error))
+
+            user.providerData.forEach((userInfo) => {
+                console.log('User info for provider: ', userInfo);
+              });
     }
 
     signOut = () => {firebase.auth().signOut()
@@ -50,17 +58,17 @@ export default class Login extends React.Component {
         return (
             <View style={styles.container}>
 
-                <Text style={styles.headertext}>Login to your account:</Text>
+                <Text style={styles.headertext}>Login to your account</Text>
 
-                <Text style={styles.textStyle}>
+                {/* <Text style={styles.textStyle}>
                     Hello, {this.state.displayName}
-                </Text>
+                </Text> */}
                 <TextInput
                     style={styles.inputBox}
                     value={this.state.email}
                     onChangeText={email => this.setState({ email })}
-                    placeholder='Email'
-                    placeholderTextColor="#b8b8b8"
+                    placeholder='Enter your email'
+                    placeholderTextColor="#838383"
                     autoCapitalize='none'
                     autocomplete="email" 
                     keyboardType="email-address">
@@ -72,20 +80,20 @@ export default class Login extends React.Component {
                     style={styles.inputBox}
                     value={this.state.password}
                     onChangeText={password => this.setState({ password })}
-                    placeholder='Password'
-                    placeholderTextColor="#b8b8b8"
+                    placeholder='Enter your password'
+                    placeholderTextColor="#838383"
                     secureTextEntry={true}>
                 </TextInput>
 
-                <Pressable style={styles.button} onPress={this.signIn}>
+                <Pressable style={styles.loginButton} onPress={this.signIn}>
                     <Text style={styles.loginButtonText}>Login</Text>
                 </Pressable>
 
-                <Pressable style={styles.button} onPress={this.signOut}>
+                {/* <Pressable style={styles.button} onPress={this.signOut}>
                     <Text style={styles.loginButtonText}>Sign Out</Text>
-                </Pressable>
+                </Pressable> */}
 
-                <Button title="Don't have an account yet? Create one!"
+                <Button style={styles.createAccountButton} title="Create new account here"
                 onPress={() => this.props.navigation.navigate('signup')}
                 ></Button>
             </View>

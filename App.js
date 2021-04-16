@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View,Image} from 'react-native'
 import {firebase} from './firebase/Config'
 import { AppLoading } from 'expo';
 import * as Font from 'expo-font';
@@ -11,6 +11,7 @@ import AddRide from './components/AddRide'
 import Rides from './components/Rides'
 import Login from './components/Login'
 import RidesItems from './components/Ridesitems'
+import Onboarding from './components/Onboarding'
 
 
 import {NavigationContainer} from '@react-navigation/native'
@@ -50,9 +51,24 @@ export default class App extends React.Component {
     
   
   return (
+    
 
-    <NavigationContainer >
-        <Stack.Navigator initialRouteName="Menu">
+    <NavigationContainer > 
+        <Stack.Navigator initialRouteName="Onboarding">
+
+        <Stack.Screen name="onboarding" component={Onboarding}
+          options={{
+            title:"Available rides",
+            headerTitle:"Available rides",
+            headerTintColor: '#fff',
+            headerStyle: {
+              backgroundColor: '#292929',
+            }
+          }}
+          >
+          </Stack.Screen>
+
+
           <Stack.Screen name="menu"  component={Menu}
           options={{
             headerShown: false,
