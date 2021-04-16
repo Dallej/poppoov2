@@ -10,10 +10,6 @@ import styles from '../style/style'
 import {Keyboard} from 'react-native'
 import Rides from './Rides';
 
-
-
-
-
 export default class AddRide extends React.Component {
 
 
@@ -26,7 +22,6 @@ export default class AddRide extends React.Component {
         }
     
     }
-
     
       AddToDatabase = () => {
         const {name,time,date,mobile} = this.state
@@ -83,9 +78,6 @@ export default class AddRide extends React.Component {
                     keyboardType="decimal-pad"
                     type="time"> 
                 </TextInput>
-    
-
-
 
                 <Pressable style={styles.button} onPress={this.AddToDatabase}>
                     <Text style={styles.buttonText}>Add </Text>

@@ -10,6 +10,7 @@ import Menu from './components/Menu'
 import AddRide from './components/AddRide'
 import Rides from './components/Rides'
 import Login from './components/Login'
+import RidesItems from './components/Ridesitems'
 import Onboarding from './components/Onboarding'
 
 

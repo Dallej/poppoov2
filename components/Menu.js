@@ -2,6 +2,8 @@ import React from 'react';
 import {View, TextInput, Pressable, Text, Button,Image, Platform} from 'react-native';
 import {firebase} from '../firebase/Config';
 import styles from '../style/style';
+
+
 // import ToggleSwitch from 'toggle-switch-react-native';
 
 
@@ -85,10 +87,9 @@ export default class Menu extends React.Component{
 
                 </View>
                 </View>
+              
                 
               
               
         )
-    }
-
-}
+        }}

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, TextInput, Pressable, Text, Modal, TouchableHighlight } from 'react-native'
-import { firebase, ROOT_REF } from '../firebase/Config'
+import { firebase, ROOT_REF, RIDES, USER_RIDES } from '../firebase/Config'
 import styles from '../style/style'
 
-
+// let name = ;
 
 export default class Rides extends React.Component {
 
@@ -11,9 +11,19 @@ export default class Rides extends React.Component {
     /* constructor() {
         super();
         this.state = {
-
+            name: '',
+            time: '',
+            mobile:''
         }
+    
     } */
+    componentDidMount() { 
+        firebase.database().ref('/rides').on('value', snapshot => {
+           console.log(snapshot.val());
+        });
+     }
+     
+    
 
     state = {
         modalVisible: false,
@@ -37,7 +47,7 @@ export default class Rides extends React.Component {
 
                         <View style={styles.modal}>
                         <Text style={{fontSize: 30, marginBottom: 30, color: "#fff"}}> Minna's ride </Text>
-                            <Text style={styles.modalText}> Drivers name </Text>
+                            <Text style={styles.modalText}></Text>
                             <Text style={styles.modalText}> Oulainen to Oulu </Text>
                             <Text style={styles.modalText}> Mobile number:  </Text>
                             <Text style={styles.modalText}> date:  </Text>
