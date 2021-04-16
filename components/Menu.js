@@ -1,6 +1,5 @@
 import React from 'react';
 import {View, TextInput, Pressable, Text, Button,Image, Platform} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import {firebase} from '../firebase/Config';
 import styles from '../style/style';
 // import ToggleSwitch from 'toggle-switch-react-native';
