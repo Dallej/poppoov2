@@ -134,7 +134,6 @@ export default StyleSheet.create({
     borderColor: '#474747',
     borderWidth: 2,
     borderRadius: 10,
-
   },
 
 
