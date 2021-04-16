@@ -3,9 +3,25 @@ import React from 'react';
 
 import Onboarding from 'react-native-onboarding-swiper';
 
-const Simple = () => (
+
+
+/* const Simple = () => ( */
+
+ export default class Simple extends React.Component{  
+  
+  constructor(){
+    super();
+    this.state={
+        
+    }   
+}
+
+  render(){
+    
+    return ( 
+
     <Onboarding
-    onDone={() => this.props.navigation.navigate('info')}
+    onDone={() =>  this.props.navigation.navigate('menu')}
     onSkip={() => this.props.navigation.navigate('menu')}
     pages={[
       {
@@ -31,5 +47,5 @@ const Simple = () => (
     ]}
   />
 );
-
-export default Simple;
+  
+  }}
