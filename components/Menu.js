@@ -11,7 +11,7 @@ import styles from '../style/style';
 // import {OAMKlogo} from '../img/OAMKlogo'
 
 
-export default class Login extends React.Component{
+export default class Menu extends React.Component{
 
     // state = {
     //     isOnToggleSwitch: false
@@ -39,6 +39,7 @@ export default class Login extends React.Component{
  */
     render(){
         return(
+            
             
             <View style={[styles.container,styles.centerpadding]}>
                     
@@ -84,11 +85,12 @@ export default class Login extends React.Component{
                         /> */}
                         {/* <Text style={{ color: "#81c5c7", fontWeight: "500", marginLeft: 125, marginTop: -20 }}>Finnish</Text>
                     </View>*/}
+
                 </View>
+                </View>
+              
                 
-              </View>
+              
               
         )
-    }
-
-}
+        }}

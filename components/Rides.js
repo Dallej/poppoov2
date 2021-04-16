@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { View, TextInput, Pressable, Text, Modal, TouchableHighlight } from 'react-native'
-import { firebase, ROOT_REF } from '../firebase/Config'
+import { firebase, ROOT_REF, RIDES, USER_RIDES } from '../firebase/Config'
 import styles from '../style/style'
 
-
+// let name = ;
 
 export default class Rides extends React.Component {
 
@@ -11,9 +11,19 @@ export default class Rides extends React.Component {
     /* constructor() {
         super();
         this.state = {
-
+            name: '',
+            time: '',
+            mobile:''
         }
+    
     } */
+    componentDidMount() { 
+        firebase.database().ref('/rides').on('value', snapshot => {
+           console.log(snapshot.val());
+        });
+     }
+     
+    
 
     state = {
         modalVisible: false,
@@ -28,7 +38,7 @@ export default class Rides extends React.Component {
         return (
             <View style={styles.container}>
 
-                <Text style={{ fontWeight: "bold", fontSize: 20, color: "#fff", margin: 20 }}> My current rides </Text>
+                <Text style={styles.ridesHeader}> Current rides </Text>
 
                  {/* MODAL */}
                     <Modal animationType={"slide"} transparent={false}
@@ -37,7 +47,7 @@ export default class Rides extends React.Component {
 
                         <View style={styles.modal}>
                         <Text style={{fontSize: 30, marginBottom: 30, color: "#fff"}}> Minna's ride </Text>
-                            <Text style={styles.modalText}> Drivers name </Text>
+                            <Text style={styles.modalText}></Text>
                             <Text style={styles.modalText}> Oulainen to Oulu </Text>
                             <Text style={styles.modalText}> Mobile number:  </Text>
                             <Text style={styles.modalText}> date:  </Text>
@@ -61,30 +71,30 @@ export default class Rides extends React.Component {
                 <View style={{ flexDirection: "row" }}>
 
                     <View style={styles.cardbox}>
-                        <Text style={styles.cardboxHeader}> Minna's ride</Text>
+                        <Text style={styles.cardboxHeader}> Driver: Minna</Text>
                         <Text style={styles.cardboxText}> OULU - OULAINEN </Text>
                         <Text style={styles.cardboxText}> 24 Mar 2021 </Text>
                         <Text style={styles.cardboxText}> Departure: </Text>
                         <Text style={styles.cardboxText}> Seats left: </Text>
                         <Pressable style={styles.cardButton} onPress={() => { this.toggleModal(true) }}>
-                            <Text style={styles.cardboxText}>View</Text>
+                            <Text style={styles.cardboxButtonText}>VIEW RIDE</Text>
                         </Pressable>
                     </View> 
 
                     <View style={styles.cardbox}>
-                        <Text style={styles.cardboxHeader}> Minna's ride</Text>
+                        <Text style={styles.cardboxHeader}> Driver: Minna</Text>
                         <Text style={styles.cardboxText}> OULU - OULAINEN </Text>
                         <Text style={styles.cardboxText}> 24 Mar 2021 </Text>
                         <Text style={styles.cardboxText}> Departure: </Text>
                         <Text style={styles.cardboxText}> Seats left: </Text>
                         <Pressable style={styles.cardButton} onPress={() => {
                                 this.toggleModal(!this.state.modalVisible)}}>
-                            <Text style={styles.cardboxText}>View</Text>
+                            <Text style={styles.cardboxButtonText}>VIEW RIDE</Text>
                         </Pressable>
                     </View>
                 </View>
 
-                <Text style={{ fontWeight: "bold", fontSize: 20, color: "#fff", margin: 20 }}>Join available rides</Text>
+                <Text style={styles.ridesHeader}>Available rides</Text>
 
                 {/* Add filter for destination here */}
 
@@ -94,26 +104,26 @@ export default class Rides extends React.Component {
                 <View style={{ flexDirection: "row" }}>
 
                     <View style={styles.cardbox}>
-                        <Text style={styles.cardboxHeader}> Minna's ride</Text>
+                        <Text style={styles.cardboxText}> Driver: Minna</Text>
                         <Text style={styles.cardboxText}> OULU - OULAINEN </Text>
                         <Text style={styles.cardboxText}> 24 Mar 2021 </Text>
                         <Text style={styles.cardboxText}> Departure: </Text>
                         <Text style={styles.cardboxText}> Seats left: </Text>
                         <Pressable style={styles.cardButton} onPress={() => {
                                 this.toggleModal(!this.state.modalVisible)}}>
-                            <Text style={styles.cardboxText}>View</Text>
+                            <Text style={styles.cardboxButtonText}>VIEW RIDE</Text>
                         </Pressable>
                     </View>
 
                     <View style={styles.cardbox}>
-                        <Text style={styles.cardboxHeader}> Anssi's ride</Text>
+                        <Text style={styles.cardboxText}> Driver: Anssi</Text>
                         <Text style={styles.cardboxText}> OULU - OULAINEN </Text>
                         <Text style={styles.cardboxText}> 24 Mar 2021 </Text>
                         <Text style={styles.cardboxText}> Departure: </Text>
                         <Text style={styles.cardboxText}> Seats left: </Text>
                         <Pressable style={styles.cardButton} onPress={() => {
                                 this.toggleModal(!this.state.modalVisible)}}>
-                            <Text style={styles.cardboxText}>View</Text>
+                            <Text style={styles.cardboxButtonText}>VIEW RIDE</Text>
                         </Pressable>
                     </View>
 

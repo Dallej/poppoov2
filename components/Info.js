@@ -32,8 +32,8 @@ export default class Info extends React.Component{
     
 
     render() {
-/*         if (this.state.fontsLoaded) {
- */            return (
+        
+            return (
                 <View style={[styles.container, styles.centerpadding]}>
                     <Image style={styles.logo} source={require("../img/OAMKlogo.png")}></Image>
 
@@ -51,7 +51,5 @@ export default class Info extends React.Component{
                     </View>
                 </View>
             );
-        }  /* else {
-        return <AppLoading />;
-    } */
+        } 
 }
