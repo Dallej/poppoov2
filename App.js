@@ -54,7 +54,7 @@ export default class App extends React.Component {
     
 
     <NavigationContainer > 
-        <Stack.Navigator initialRouteName="menu">
+        <Stack.Navigator initialRouteName="Menu">
 
         {/* <Stack.Screen name="onboarding" component={Onboarding}
           options={{

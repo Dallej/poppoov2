@@ -3,7 +3,8 @@ import { View, TextInput, Pressable, Text, Modal, TouchableHighlight } from 'rea
 import { firebase, ROOT_REF, RIDES, USER_RIDES } from '../firebase/Config'
 import styles from '../style/style'
 
-// let name = ;
+
+
 
 export default class Rides extends React.Component {
 
@@ -17,24 +18,44 @@ export default class Rides extends React.Component {
         }
     
     } */
-    componentDidMount() { 
+     componentDidMount() { 
         firebase.database().ref('/rides').on('value', snapshot => {
-           console.log(snapshot.val());
+           console.log(snapshot.val())
+           
         });
-     }
-     
-    
+     } 
 
+     /* componentDidMount() {
+        firebase.ref(RIDES).on("value", querySnapShot => {
+          let data = querySnapShot.val() ? querySnapShot.val() : {};
+          let rideItem = { ...data };
+          this.setState({
+            rides: rideItem,
+          });
+        });
+      } */
+
+     writeRidesData(name, mobile, time) {
+        firebase.database().ref('rides/').set({
+          name: name,
+          mobile: mobile,
+          time : time
+        });
+    }
+     
+     
     state = {
         modalVisible: false,
     }
+
     toggleModal(visible) {
         this.setState({ modalVisible: visible });
     }
 
     render() {
 
-
+        // let rideKeys = Object.keys(this.state.rides);
+        
         return (
             <View style={styles.container}>
 
@@ -46,7 +67,7 @@ export default class Rides extends React.Component {
                         onRequestClose={() => { console.log("Modal has been closed.") }}>
 
                         <View style={styles.modal}>
-                        <Text style={{fontSize: 30, marginBottom: 30, color: "#fff"}}> Minna's ride </Text>
+                        <Text style={{fontSize: 30, marginBottom: 30, color: "#fff"}}></Text>
                             <Text style={styles.modalText}></Text>
                             <Text style={styles.modalText}> Oulainen to Oulu </Text>
                             <Text style={styles.modalText}> Mobile number:  </Text>
@@ -69,9 +90,9 @@ export default class Rides extends React.Component {
 
                 {/* MY CURRENT RIDES VIEWS */}
                 <View style={{ flexDirection: "row" }}>
-
+                
                     <View style={styles.cardbox}>
-                        <Text style={styles.cardboxHeader}> Driver: Minna</Text>
+                        <Text style={styles.cardboxHeader}> </Text>
                         <Text style={styles.cardboxText}> OULU - OULAINEN </Text>
                         <Text style={styles.cardboxText}> 24 Mar 2021 </Text>
                         <Text style={styles.cardboxText}> Departure: </Text>
