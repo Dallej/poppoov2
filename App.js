@@ -54,9 +54,9 @@ export default class App extends React.Component {
     
 
     <NavigationContainer > 
-        <Stack.Navigator initialRouteName="Onboarding">
+        <Stack.Navigator initialRouteName="menu">
 
-        <Stack.Screen name="onboarding" component={Onboarding}
+        {/* <Stack.Screen name="onboarding" component={Onboarding}
           options={{
             title:"Available rides",
             headerTitle:"Available rides",
@@ -66,7 +66,7 @@ export default class App extends React.Component {
             }
           }}
           >
-          </Stack.Screen>
+          </Stack.Screen> */}
 
 
           <Stack.Screen name="menu"  component={Menu}

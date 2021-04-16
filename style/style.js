@@ -7,14 +7,20 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#1c1c1c',
-    alignItems: 'center',
-    
+    alignItems: 'center', 
   },
   centerpadding:{
     paddingTop:200
   },
+  logo: {
+    width: '80%', 
+    height:'40%', 
+    resizeMode: 'contain', 
+    marginTop: -200
+  },
 
-  //Footer styles
+
+////////////     Footer styles
   footer: {
     marginBottom: -150,
     marginTop: 50,
@@ -28,16 +34,6 @@ export default StyleSheet.create({
   textAlign: "center",
   color: "#fff",
   marginLeft: 95
-  },
-  inputBox: {
-    width: '75%',
-    margin: 10,
-    padding: 15,
-    fontSize: 14,
-    backgroundColor: '#EAEAEA',
-    color: '#fff',
-    borderRadius: 5,
-    textAlign: 'left'
   },
   button: {
     marginTop: 10,
@@ -54,7 +50,9 @@ export default StyleSheet.create({
     fontSize: 18,
     color: '#fff'
   },
-  //Login page 
+
+
+////////////     Login page 
   loginButton:{
     marginTop: 20,
     marginBottom: 30,
@@ -76,34 +74,72 @@ export default StyleSheet.create({
   buttonSignup: {
     fontSize: 12
   },
-  logo: {
-    width: '80%', 
-    height:'40%', 
-    resizeMode: 'contain', 
-    marginTop: -200
+  inputBox: {
+    width: '75%',
+    margin: 10,
+    padding: 15,
+    fontSize: 14,
+    backgroundColor: '#EAEAEA',
+    color: '#fff',
+    borderRadius: 5,
+    textAlign: 'left'
   },
-  map: {
-    width: 200, 
-    height:200, 
-    resizeMode: 'contain', 
-    marginTop: 10,
-    marginBottom: 10,
-    borderRadius: 5
+
+
+////////////     Add ride page
+  containerAddride: {
+    flex: 1,
+    backgroundColor: '#1c1c1c',
+    alignItems: 'center'
   },
   headertext:{
     fontSize:20,
-    marginBottom:10,
+    marginBottom:40,
     marginTop: 60,
     color:"#EAEAEA",
-    
+    textAlign: 'center'
   },
   infotext:{
     color:"#EAEAEA",
-    fontSize:18
+    fontSize:18,
+    textAlign: 'left',
+  },
+  inputBoxAddride: {
+    width: '75%',
+    marginTop: 10,
+    marginBottom: 20,
+    padding: 15,
+    fontSize: 14,
+    backgroundColor: '#EAEAEA',
+    color: '#fff',
+    borderRadius: 5,
+    textAlign: 'left',
+  },
+  buttonAddride: {
+    marginTop: 10,
+    marginBottom: 10,
+    paddingVertical: 5,
+    alignItems: 'center',
+    backgroundColor: '#3b3b3b',
+    borderColor: '#474747',
+    borderWidth: 1,
+    borderRadius: 5,
+    width: 150,
+  },
+  calendarAddride: {
+    fontSize: 16,
+    backgroundColor: "#EAEAEA",
+    borderRadius: 5,
+    marginTop: 10,
+    marginBottom: 20,
+    padding: 15,
+    borderColor: '#474747',
+    borderWidth: 2,
+    borderRadius: 10,
   },
 
 
-  //Available rides page
+  ////////////     Available rides page
   ridesHeader: {
     fontWeight: "500", 
     fontSize: 20, 
@@ -143,8 +179,8 @@ export default StyleSheet.create({
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
     marginTop: 30,
-    
   },
+
 
   //Menu buttons
   buttonModal: {
@@ -182,6 +218,7 @@ export default StyleSheet.create({
   },
 
 
+
   //
   modal: {
     flex: 1,
@@ -202,7 +239,12 @@ export default StyleSheet.create({
     color: "black",
     fontFamily: "headline"
   },
-  
-
-
+  map: {
+    width: 200, 
+    height:200, 
+    resizeMode: 'contain', 
+    marginTop: 10,
+    marginBottom: 10,
+    borderRadius: 5
+  },
 });
