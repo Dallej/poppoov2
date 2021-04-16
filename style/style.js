@@ -93,7 +93,7 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   headertext:{
-    fontSize:15,
+    fontSize:18,
     marginBottom:40,
     marginTop: 60,
     color:"#EAEAEA",
@@ -117,7 +117,7 @@ export default StyleSheet.create({
   },
   buttonAddride: {
     marginTop: 10,
-    marginBottom: 10,
+    marginBottom: 30,
     paddingVertical: 5,
     alignItems: 'center',
     backgroundColor: '#3b3b3b',
@@ -129,8 +129,9 @@ export default StyleSheet.create({
   calendarAddride: {
     fontSize: 16,
     backgroundColor: "#EAEAEA",
-    borderRadius: 5,
     marginTop: 10,
+    marginBottom: 10,
+    height: 250,
     borderColor: '#474747',
     borderWidth: 2,
     borderRadius: 10,
