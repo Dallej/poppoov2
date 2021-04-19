@@ -23,26 +23,30 @@ import Onboarding from 'react-native-onboarding-swiper';
     <Onboarding
     onDone={() =>  this.props.navigation.navigate('menu')}
     onSkip={() => this.props.navigation.navigate('menu')}
+    bottomBarHeight={60}
+    topBarHeight={0}
+    imageContainerStyles={{height:400,width:10,paddingTop:10}}
+    containerStyles={{height:0}}
     pages={[
       {
         backgroundColor: '#fff',
         
-        title: 'Welcome',
-        image: <Image source={require('../img/boarding1.jpg')} />,
-        subtitle: 'testing text',
+        title: 'Welcome to POPPOO',
+        image: <Image source={require('../img/kuva.png')} />,
+        subtitle: 'Start by checking out rides...',
       },
       {
-        backgroundColor: '#fe6e58',
-        
+        backgroundColor: '#f1c11a',
+       
         title: 'How to use...',
-        image: <Image source={require('../img/boarding1.jpg')} />,
-        subtitle: 'testing text',
+        image: <Image source={require('../img/kuva.png')} />,
+        subtitle: 'Continue by joining a ride...',
       },
       {
         backgroundColor: '#999',
-        title: 'Stay safe!',
-        image: <Image source={require('../img/boarding1.jpg')} />,
-        subtitle: 'testing text',
+        title: 'Enjoy your free trip!',
+        image: <Image source={require('../img/kuva.png')} />,
+        subtitle: 'Remember to stay safe!',
       },
     ]}
   />
