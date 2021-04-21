@@ -31,22 +31,28 @@ import Onboarding from 'react-native-onboarding-swiper';
       {
         backgroundColor: '#fff',
         
-        title: 'Welcome to POPPOO',
-        image: <Image source={require('../img/kuva.png')} />,
-        subtitle: 'Start by checking out rides...',
+        title: 'Welcome to OAMK POPPOO',
+        image: <Image source={require('../img/kuva5.png')} />,
+        subtitle: 'Start by creating an account.',
       },
       {
         backgroundColor: '#f1c11a',
        
-        title: 'How to use...',
-        image: <Image source={require('../img/kuva.png')} />,
-        subtitle: 'Continue by joining a ride...',
+        title: 'Check out available rides or create your own',
+        image: <Image source={require('../img/kuva6.png')} />,
+        subtitle: 'Join a ride.',
       },
       {
         backgroundColor: '#999',
         title: 'Enjoy your free trip!',
-        image: <Image source={require('../img/kuva.png')} />,
-        subtitle: 'Remember to stay safe!',
+        image: <Image source={require('../img/kuva2.png')} />,
+        subtitle: 'Remember to thank the driver.',
+      },
+      {
+        backgroundColor: '#fff',
+        title: 'Remember to stay safe!',
+        image: <Image source={require('../img/kuva3.png')} />,
+        subtitle: 'More COVID-19 info: www.thl.fi',
       },
     ]}
   />
