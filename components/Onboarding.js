@@ -1,35 +1,35 @@
-import { Image } from 'react-native';
-import React from 'react';
+ import { Image } from 'react-native';
+ import React from 'react';
 
-import Onboarding from 'react-native-onboarding-swiper';
+ import Onboarding from 'react-native-onboarding-swiper';
 
 
 
-/* const Simple = () => ( */
-
- export default class Simple extends React.Component{  
+/*  const Simple = () => ( 
+ */
+  export default class Simple extends React.Component{  
   
-  constructor(){
-    super();
-    this.state={
+   constructor(){
+     super();
+     this.state={
         
-    }   
-}
+     }   
+ }
 
-  render(){
+   render(){
     
-    return ( 
+     return ( 
 
-    <Onboarding
-    onDone={() =>  this.props.navigation.navigate('menu')}
-    onSkip={() => this.props.navigation.navigate('menu')}
-    bottomBarHeight={60}
-    topBarHeight={0}
-    imageContainerStyles={{height:400,width:10,paddingTop:10}}
-    containerStyles={{height:0}}
-    pages={[
-      {
-        backgroundColor: '#fff',
+     <Onboarding
+     onDone={() =>  this.props.navigation.navigate('menu')}
+     onSkip={() => this.props.navigation.navigate('menu')}
+     bottomBarHeight={60}
+     topBarHeight={0}
+     imageContainerStyles={{height:400,width:10,paddingTop:10}}
+     containerStyles={{height:0}}
+     pages={[
+       {
+         backgroundColor: '#fff',
         
         title: 'Welcome to OAMK POPPOO',
         image: <Image source={require('../img/kuva5.png')} />,
@@ -58,4 +58,5 @@ import Onboarding from 'react-native-onboarding-swiper';
   />
 );
   
-  }}
+   }}
+ 
