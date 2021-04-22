@@ -92,7 +92,7 @@ export default class Rides extends React.Component {
                 <View style={{ flexDirection: "row" }}>
                 
                     <View style={styles.cardbox}>
-                        <Text style={styles.cardboxHeader}> </Text>
+                        <Text style={styles.cardboxHeader}> Driver:</Text>
                         <Text style={styles.cardboxText}> OULU - OULAINEN </Text>
                         <Text style={styles.cardboxText}> 24 Mar 2021 </Text>
                         <Text style={styles.cardboxText}> Departure: </Text>

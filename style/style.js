@@ -20,7 +20,7 @@ export default StyleSheet.create({
   },
 
 
-////////////     Footer styles
+// FOOTER STYLES
   footer: {
     marginBottom: -150,
     marginTop: 50,
@@ -52,7 +52,7 @@ export default StyleSheet.create({
   },
 
 
-////////////     Login page 
+// LOGIN PAGE
   loginButton:{
     marginTop: 20,
     marginBottom: 30,
@@ -85,7 +85,7 @@ export default StyleSheet.create({
   },
 
 
-////////////     Add ride page
+// ADD RIDE PAGE
   containerAddride: {
     flex: 1,
     backgroundColor: '#1c1c1c',
@@ -136,7 +136,7 @@ export default StyleSheet.create({
   },
 
 
-  ////////////     Available rides page
+  // AVAILABLE RIDES PAGE
   ridesHeader: {
     fontWeight: "500", 
     fontSize: 20, 
@@ -179,7 +179,7 @@ export default StyleSheet.create({
   },
 
 
-  //Menu buttons
+  // MENU BUTTONS
   buttonModal: {
     marginTop: 10,
     marginBottom: 10,
@@ -191,7 +191,7 @@ export default StyleSheet.create({
     borderRadius: 5,
     width: 150,
   },
-  IconButton: {
+  /* IconButton: {
     paddingVertical: 13,
     alignItems: 'center',
     backgroundColor: '#3b3b3b',
@@ -200,14 +200,25 @@ export default StyleSheet.create({
     borderRadius: 10,
     width: 200,
     margin: 10,
+  }, */
+  IconButton: {
+    paddingVertical: 13,
+    alignItems: 'center',
+    backgroundColor: '#77AB9F',
+    borderColor: '#77AB9F',
+    borderWidth: 2,
+    borderRadius: 10,
+    width: 200,
+    margin: 10,
   },
   buttonMenuLogin: {
-    color: "#3385ff",
+    color: "#3761ed",
     fontSize: 21,
   },
   buttonTextMenu: { 
     fontSize: 18,
     color: '#EAEAEA',
+    fontFamily: "Avenir"
   },
   menuButtons:{
     marginTop: 10,
@@ -216,7 +227,7 @@ export default StyleSheet.create({
 
 
 
-  //
+  // MODAL
   modal: {
     flex: 1,
     alignItems: 'center',
@@ -228,6 +239,9 @@ export default StyleSheet.create({
     margin: 7,
     fontSize: 21,
   },
+
+
+  // OTHER STYLES
   textStyle: {
     color: "#EAEAEA"
   },
