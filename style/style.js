@@ -80,7 +80,6 @@ export default StyleSheet.create({
     padding: 15,
     fontSize: 12,
     backgroundColor: '#EAEAEA',
-    color: '#fff',
     borderRadius: 5,
     textAlign: 'left'
   },
@@ -111,7 +110,6 @@ export default StyleSheet.create({
     padding: 15,
     fontSize: 14,
     backgroundColor: '#EAEAEA',
-    color: '#fff',
     borderRadius: 5,
     textAlign: 'left',
   },
