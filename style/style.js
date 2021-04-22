@@ -71,9 +71,6 @@ export default StyleSheet.create({
  createAccountButton: {
    fontSize: 12
  },
-  buttonSignup: {
-    fontSize: 12
-  },
   inputBox: {
     width: '75%',
     margin: 10,
@@ -84,12 +81,49 @@ export default StyleSheet.create({
     textAlign: 'left'
   },
 
+  // SIGN UP PAGE
+  containerSignup:{
+    flex: 1,
+    backgroundColor: '#1c1c1c',
+  },
+  inputBoxSignup: {
+    width: '75%',
+    marginLeft: '15%',
+    marginTop: 10,
+    marginBottom: 10,
+    padding: 15,
+    fontSize: 12,
+    backgroundColor: '#EAEAEA',
+    borderRadius: 5,
+    textAlign: 'left'
+  },
+  buttonSignup: {
+    marginLeft: '30%',
+    marginTop: 20,
+    marginBottom: 30,
+    paddingVertical: 5,
+    alignItems: 'center',
+    backgroundColor: '#3b3b3b',
+    borderColor: '#474747',
+    borderWidth: 1,
+    borderRadius: 5,
+    width: 150,
+  },
+  buttonTextSignup: {
+    color: '#EAEAEA'
+  },
+  infotextSignup: {
+    color:"#EAEAEA",
+    fontSize:14,
+    textAlign: 'left',
+    marginLeft: '15%'
+  },
 
-// ADD RIDE PAGE
+
+//  ADD RIDE PAGE
   containerAddride: {
     flex: 1,
     backgroundColor: '#1c1c1c',
-    alignItems: 'center'
   },
   headertext:{
     fontSize:18,
@@ -102,9 +136,11 @@ export default StyleSheet.create({
     color:"#EAEAEA",
     fontSize:14,
     textAlign: 'left',
+    marginLeft: '15%',
   },
   inputBoxAddride: {
     width: '75%',
+    marginLeft: '15%',
     marginTop: 10,
     marginBottom: 20,
     padding: 15,
@@ -114,6 +150,7 @@ export default StyleSheet.create({
     textAlign: 'left',
   },
   buttonAddride: {
+    marginLeft: '30%',
     marginTop: 10,
     marginBottom: 30,
     paddingVertical: 5,
@@ -127,9 +164,12 @@ export default StyleSheet.create({
   calendarAddride: {
     fontSize: 16,
     backgroundColor: "#EAEAEA",
+    marginLeft: 40,
+    marginRight: 30,
     marginTop: 10,
     marginBottom: 10,
     height: 250,
+    width: 250,
     borderColor: '#474747',
     borderWidth: 2,
     borderRadius: 10,
@@ -214,6 +254,7 @@ export default StyleSheet.create({
   buttonMenuLogin: {
     color: "#3761ed",
     fontSize: 21,
+    fontFamily: "Avenir"
   },
   buttonTextMenu: { 
     fontSize: 18,
@@ -226,6 +267,13 @@ export default StyleSheet.create({
   },
 
 
+  // INFO PAGE
+  logoInfo: {
+    width: '50%', 
+    height:'40%', 
+    resizeMode: 'contain', 
+    marginTop: -200
+  },
 
   // MODAL
   modal: {

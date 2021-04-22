@@ -35,7 +35,7 @@ export default class Info extends React.Component{
         
             return (
                 <View style={[styles.container, styles.centerpadding]}>
-                    <Image style={styles.logo} source={require("../img/OAMKlogo.png")}></Image>
+                    <Image style={styles.logoInfo} source={require("../img/OAMKlogo.png")}></Image>
 
 
                     <View>
@@ -47,7 +47,6 @@ export default class Info extends React.Component{
                     <View>
                         <Text style={{ fontWeight: "bold", color: "#fff" }}>OAMK Oulainen pickup location</Text>
                         <Text style={{ color: "#fff" }}> Kuntotie 2, 86300 Oulainen</Text>
-                        <Image style={styles.map} source={require("../img/mapfirst.jpg")}></Image>
                     </View>
                 </View>
             );
