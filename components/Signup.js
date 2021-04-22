@@ -34,33 +34,46 @@ export default class Signup extends React.Component{
 
     render(){
         return(
-            <View style={styles.container}>
-                <TextInput 
-                    style={styles.inputBox} 
-                    value={this.state.name}
-                    onChangeText={name=> this.setState({name})}
-                    placeholder='Full Name'> 
-                </TextInput>
+            <View style={styles.containerSignup}>
+
+                <Text style={styles.headertext}>Create new account</Text>
+
+                <Text style={styles.infotextSignup}>Name</Text>
 
                 <TextInput 
-                    style={styles.inputBox} 
-                    value={this.state.email}
-                    onChangeText={email=> this.setState({email})}
-                    placeholder='Email'
+                    style={styles.inputBoxSignup} 
+                    value={this.state.name}
+                    onChangeText={name=> this.setState({name})}
+                    placeholder='Enter your full name'
+                    placeholderTextColor="#838383"
                     autoCapitalize='none'> 
                 </TextInput>
 
-                
+                <Text style={styles.infotextSignup}>Email</Text>
+
                 <TextInput 
-                    style={styles.inputBox} 
+                    style={styles.inputBoxSignup} 
+                    value={this.state.email}
+                    onChangeText={email=> this.setState({email})}
+                    placeholder='Enter your email'
+                    placeholderTextColor="#838383"
+                    autoCapitalize='none'> 
+                </TextInput>
+
+                <Text style={styles.infotextSignup}>Create a password</Text>
+
+                <TextInput 
+                    style={styles.inputBoxSignup} 
                     value={this.state.password}
                     onChangeText={password=> this.setState({password})}
-                    placeholder='Password'
+                    placeholder='Enter your password'
+                    placeholderTextColor="#838383"
+                    autoCapitalize='none'
                     secureTextEntry={true}> 
                 </TextInput>
 
-                <Pressable style={styles.button} onPress={this.signUp}>
-                    <Text style={styles.buttonText}>Signup</Text>
+                <Pressable style={styles.buttonSignup} onPress={this.signUp}>
+                    <Text style={styles.buttonTextSignup}>Signup</Text>
                 </Pressable>
             </View>
         )

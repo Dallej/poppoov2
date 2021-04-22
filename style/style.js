@@ -71,9 +71,6 @@ export default StyleSheet.create({
  createAccountButton: {
    fontSize: 12
  },
-  buttonSignup: {
-    fontSize: 12
-  },
   inputBox: {
     width: '75%',
     margin: 10,
@@ -82,6 +79,45 @@ export default StyleSheet.create({
     backgroundColor: '#EAEAEA',
     borderRadius: 5,
     textAlign: 'left'
+  },
+
+
+  ///////////     Signup page
+  containerSignup:{
+    flex: 1,
+    backgroundColor: '#1c1c1c',
+  },
+  inputBoxSignup: {
+    width: '75%',
+    marginLeft: '15%',
+    marginTop: 10,
+    marginBottom: 10,
+    padding: 15,
+    fontSize: 12,
+    backgroundColor: '#EAEAEA',
+    borderRadius: 5,
+    textAlign: 'left'
+  },
+  buttonSignup: {
+    marginLeft: '30%',
+    marginTop: 20,
+    marginBottom: 30,
+    paddingVertical: 5,
+    alignItems: 'center',
+    backgroundColor: '#3b3b3b',
+    borderColor: '#474747',
+    borderWidth: 1,
+    borderRadius: 5,
+    width: 150,
+  },
+  buttonTextSignup: {
+    color: '#EAEAEA'
+  },
+  infotextSignup: {
+    color:"#EAEAEA",
+    fontSize:14,
+    textAlign: 'left',
+    marginLeft: '15%'
   },
 
 
