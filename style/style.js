@@ -125,7 +125,6 @@ export default StyleSheet.create({
   containerAddride: {
     flex: 1,
     backgroundColor: '#1c1c1c',
-    alignItems: 'center'
   },
   headertext:{
     fontSize:18,
@@ -138,9 +137,11 @@ export default StyleSheet.create({
     color:"#EAEAEA",
     fontSize:14,
     textAlign: 'left',
+    marginLeft: '15%',
   },
   inputBoxAddride: {
     width: '75%',
+    marginLeft: '15%',
     marginTop: 10,
     marginBottom: 20,
     padding: 15,
@@ -150,6 +151,7 @@ export default StyleSheet.create({
     textAlign: 'left',
   },
   buttonAddride: {
+    marginLeft: '30%',
     marginTop: 10,
     marginBottom: 30,
     paddingVertical: 5,
@@ -163,9 +165,12 @@ export default StyleSheet.create({
   calendarAddride: {
     fontSize: 16,
     backgroundColor: "#EAEAEA",
+    marginLeft: 40,
+    marginRight: 30,
     marginTop: 10,
     marginBottom: 10,
     height: 250,
+    width: 250,
     borderColor: '#474747',
     borderWidth: 2,
     borderRadius: 10,
