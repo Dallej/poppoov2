@@ -256,8 +256,15 @@ export default StyleSheet.create({
   },
 
 
+  ///////////// Info page
+  logoInfo: {
+    width: '50%', 
+    height:'40%', 
+    resizeMode: 'contain', 
+    marginTop: -200
+  },
 
-  //
+  ///////////// Others
   modal: {
     flex: 1,
     alignItems: 'center',
