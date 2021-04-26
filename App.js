@@ -89,7 +89,7 @@ export default class App extends React.Component {
             headerTitle:"Available rides",
             headerTintColor: '#fff',
             headerStyle: {
-              backgroundColor: '#292929',
+              backgroundColor: '#77AB9F',
             }
           }}
           >
@@ -101,7 +101,7 @@ export default class App extends React.Component {
             headerTitle:"Offer a ride",
             headerTintColor: '#fff',
             headerStyle: {
-              backgroundColor: '#292929',
+              backgroundColor: '#77AB9F',
             }
           }}
           >

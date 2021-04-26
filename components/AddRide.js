@@ -9,6 +9,8 @@ require('firebase/auth')
 import styles from '../style/style'
 import {Keyboard} from 'react-native'
 import Rides from './Rides';
+import { MaterialIcons } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 export default class AddRide extends React.Component {
 
@@ -46,14 +48,12 @@ export default class AddRide extends React.Component {
         
         return (
             <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-                <ScrollView >
+                <ScrollView style={{backgroundColor: '#1c1c1c'}} >
 
                      <View style={styles.containerAddride}>
                 
                         <Text style={styles.headertext}>Enter driver information</Text>
-
-                        <Text style={styles.infotext}>Drivers name</Text>
-
+                        <Text style={styles.infotext}><FontAwesome name="user" size={14} color="orange" />  Drivers name</Text>
                         <TextInput 
                             style={styles.inputBoxAddride} 
                             value={this.state.name}
@@ -65,7 +65,7 @@ export default class AddRide extends React.Component {
                             maxLength={20}> 
                         </TextInput>
 
-                        <Text style={styles.infotext}>Mobile number</Text>
+                        <Text style={styles.infotext}><FontAwesome name="mobile-phone" size={14} color="orange" />  Mobile number</Text>
 
                         <TextInput 
                             style={styles.inputBoxAddride} 
@@ -83,7 +83,7 @@ export default class AddRide extends React.Component {
 
                         <Text style={styles.headertext}>Enter ride information</Text>
 
-                        <Text style={styles.infotext}>Start point</Text>
+                        <Text style={styles.infotext}><MaterialIcons name="home" size={14} color="orange" />  Start point  </Text>
 
                         <TextInput 
                             style={styles.inputBoxAddride} 
@@ -94,7 +94,7 @@ export default class AddRide extends React.Component {
                             autoCapitalize='none'> 
                         </TextInput>
 
-                        <Text style={styles.infotext}>End point</Text>
+                        <Text style={styles.infotext}> <MaterialIcons name="gps-fixed" size={14} color="orange" />  End point</Text>
 
                         <TextInput 
                             style={styles.inputBoxAddride} 
@@ -105,7 +105,7 @@ export default class AddRide extends React.Component {
                             autoCapitalize='none'> 
                         </TextInput>
 
-                        <Text style={styles.infotext}>Departure time </Text>
+                        <Text style={styles.infotext}><FontAwesome name="clock-o" size={14} color="orange" />  Departure time </Text>
 
                         <TextInput 
                             style={styles.inputBoxAddride} 
@@ -118,7 +118,7 @@ export default class AddRide extends React.Component {
                             type="time"> 
                         </TextInput>
 
-                        <Text style={styles.infotext}>Select date </Text>
+                        <Text style={styles.infotext}> <FontAwesome name="calendar" size={14} color="orange" />  Select date </Text>
 
                         <Calendar
                         style={styles.calendarAddride}
