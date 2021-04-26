@@ -23,6 +23,7 @@
     "force": "^0.0.3",
     "main": "src/index.js",
     "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
