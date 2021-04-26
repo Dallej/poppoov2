@@ -287,8 +287,9 @@ export default StyleSheet.create({
     margin: 10,
   },
   buttonMenuLogin: {
-    //color: "#3761ed",
-    color: "#F79421",
+    //color: "#3761ed", //default blue
+    //color: "#F79421",   //orange
+    color: "#fff",
     fontSize: 21,
     fontFamily: "Avenir"
   },

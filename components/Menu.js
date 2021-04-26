@@ -9,16 +9,17 @@ import styles from '../style/style';
 
 // import {OAMKlogo} from '../img/OAMKlogo'
 
-
 export default class Menu extends React.Component{
 
      state = {
          isOnToggleSwitch: false
+         
        };
 
        onToggle(isOn) {
          console.log("Changed to " + isOn);
        }
+
 
     constructor(){
         super();
@@ -71,7 +72,7 @@ export default class Menu extends React.Component{
                      <View style={styles.footerText}>      
                          <ToggleSwitch
                         label="English"
-                        onColor="#81c5c7"
+                        onColor="#F79421"
                         labelStyle={{ color: "#fff", fontWeight: "500" }}
                         isOn={this.state.isOnToggleSwitch}
                         onToggle={isOnToggleSwitch => {

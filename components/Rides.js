@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, TextInput, Pressable, Text, Modal, TouchableHighlight,  ScrollView, FlatList } from 'react-native'
+import { createIconSetFromFontello } from 'react-native-vector-icons';
 import { firebase, ROOT_REF, RIDES, USER_RIDES } from '../firebase/Config'
 import styles from '../style/style'
 
@@ -9,21 +10,46 @@ import styles from '../style/style'
 export default class Rides extends React.Component {
 
 
-    /* constructor() {
-        super();
+    /*  constructor(props) {
+        super(props);
         this.state = {
             name: '',
             time: '',
             mobile:''
         }
     
-    } */
-     componentDidMount() { 
+    }  */
+
+    state = {
+        rides: null,
+        modalVisible: false,
+    }
+
+     /* componentDidMount() { 
         firebase.database().ref('/rides').on('value', snapshot => {
-           console.log(snapshot.val())
-           
+          console.log(snapshot.val())
+          // console.log(JSON.parse())
+
         });
-     } 
+    } */
+
+    componentDidMount() { 
+        console.log("mounted")
+        firebase.database().ref("/rides")
+        .get()
+        .then( snapshot => {
+            console.log(snapshot)
+            const rides = [] 
+            snapshot.forEach(doc => {
+                const data = doc.data()
+                rides.push(data)
+            })
+            this.setState({ rides : rides })
+        })
+        .catch(error => console.log(error))
+           
+        }
+     
 
      /* componentDidMount() {
         firebase.ref(RIDES).on("value", querySnapShot => {
@@ -35,18 +61,13 @@ export default class Rides extends React.Component {
         });
       } */
 
-     writeRidesData(name, mobile, time) {
-        firebase.database().ref('rides/').set({
+    /*  writeRidesData(rideID, name, mobile, time) {
+        firebase.database().ref('rides/ + rideID').set({
           name: name,
           mobile: mobile,
           time : time
         });
-    }
-     
-     
-    state = {
-        modalVisible: false,
-    }
+    } */
 
     toggleModal(visible) {
         this.setState({ modalVisible: visible });
@@ -92,7 +113,19 @@ export default class Rides extends React.Component {
 
                 {/* MY CURRENT RIDES VIEWS */}
                 <View style={{ flexDirection: "row" }}>
-                
+
+                 {  
+                this.state.rides && 
+                this.state.rides.map( rides => {
+                        return (
+                            <View style={styles.cardboxText}>
+                                <Text style={styles.cardboxText}>{rides.name}</Text>
+                                <Text style={styles.cardboxText}>Mobile:{String(rides.mobile)}</Text>
+                            </View>
+                        )
+                    })
+                    } 
+
                     <View style={styles.cardbox}>
                         <Text style={styles.cardboxHeader}> Driver:</Text>
                         <Text style={styles.cardboxText}> OULU - OULAINEN </Text>
@@ -103,6 +136,7 @@ export default class Rides extends React.Component {
                             <Text style={styles.cardboxButtonText}>VIEW RIDE</Text>
                         </Pressable>
                     </View> 
+                    
 
                     <View style={styles.cardbox}>
                         <Text style={styles.cardboxHeader}> Driver: Minna</Text>
@@ -122,7 +156,7 @@ export default class Rides extends React.Component {
                 {/* Add filter for destination here */}
 
                 {/* When view is clicked it opens a "modal" and a button to join that ride */}
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
+        <ScrollView horizontal={true}>
                 {/* AVAILABLE RIDES VIEWS */}
                 <View style={{ flexDirection: "row" }}>
 
@@ -137,6 +171,9 @@ export default class Rides extends React.Component {
                             <Text style={styles.cardboxButtonText}>VIEW RIDE</Text>
                         </Pressable>
                     </View>
+                    
+                        
+                    
 
                     <View style={styles.cardbox}>
                         <Text style={styles.cardboxText}> Driver: Anssi</Text>
@@ -149,6 +186,16 @@ export default class Rides extends React.Component {
                             <Text style={styles.cardboxButtonText}>VIEW RIDE</Text>
                         </Pressable>
                     </View>
+                    <View style={styles.cardbox}>
+                        <Text style={styles.cardboxHeader}> Driver:</Text>
+                        <Text style={styles.cardboxText}> OULU - OULAINEN </Text>
+                        <Text style={styles.cardboxText}> 24 Mar 2021 </Text>
+                        <Text style={styles.cardboxText}> Departure: </Text>
+                        <Text style={styles.cardboxText}> Seats left: </Text>
+                        <Pressable style={styles.cardButton} onPress={() => { this.toggleModal(true) }}>
+                            <Text style={styles.cardboxButtonText}>VIEW RIDE</Text>
+                        </Pressable>
+                    </View> 
                 </View>
          </ScrollView>
 

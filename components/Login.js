@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View, TextInput, Pressable, Text, Button } from 'react-native'
 import { firebase } from '../firebase/Config'
 import styles from '../style/style'
 
 const user = firebase.auth().currentUser;
+// const [loginState, setLoginState] = useState("Login");
 
 export default class Login extends React.Component {
 
@@ -29,6 +30,7 @@ export default class Login extends React.Component {
                 var name = user.displayName;
                 alert("Logged-in successfully", "test")
                 console.log('User logged-in successfully!', {email})
+                //setLoginState("Sign Out")
                 // ...
               })
             .then(() => this.props.navigation.navigate('menu'))
