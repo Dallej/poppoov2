@@ -155,7 +155,7 @@ export default StyleSheet.create({
     marginBottom: 30,
     paddingVertical: 5,
     alignItems: 'center',
-    backgroundColor: '#3b3b3b',
+    backgroundColor: '#77AB9F',
     borderColor: '#474747',
     borderWidth: 1,
     borderRadius: 5,
