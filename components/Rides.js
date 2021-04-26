@@ -89,7 +89,7 @@ export default class Rides extends React.Component {
                         onRequestClose={() => { console.log("Modal has been closed.") }}>
 
                         <View style={styles.modal}>
-                        <Text style={{fontSize: 30, marginBottom: 30, color: "#fff"}}></Text>
+                        <Text style={{fontSize: 30, marginBottom: 30, color: "#77AB9F"}}>OMG A RIDEEE, LETS GOOOO</Text>
                             <Text style={styles.modalText}></Text>
                             <Text style={styles.modalText}> Oulainen to Oulu </Text>
                             <Text style={styles.modalText}> Mobile number:  </Text>

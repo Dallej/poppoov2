@@ -255,17 +255,7 @@ export default StyleSheet.create({
 
 
   // MENU BUTTONS
-  buttonModal: {
-    marginTop: 10,
-    marginBottom: 10,
-    paddingVertical: 5,
-    alignItems: 'center',
-    backgroundColor: '#3b3b3b',
-    borderColor: '#474747',
-    borderWidth: 1,
-    borderRadius: 5,
-    width: 150,
-  },
+  
   /* IconButton: {
     paddingVertical: 13,
     alignItems: 'center',
@@ -314,6 +304,17 @@ export default StyleSheet.create({
     color: "#b8b8b8",
     margin: 7,
     fontSize: 21,
+  },
+  buttonModal: {
+    marginTop: 10,
+    marginBottom: 10,
+    paddingVertical: 5,
+    alignItems: 'center',
+    backgroundColor: '#77AB9F',
+    borderColor: '#77AB9F',
+    borderWidth: 1,
+    borderRadius: 5,
+    width: 150,
   },
 
 
