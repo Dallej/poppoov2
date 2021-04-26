@@ -217,6 +217,42 @@ export default StyleSheet.create({
     marginTop: 30,
   },
 
+  // INFO PAGE
+
+  infoPage: {
+    marginLeft: 50,
+    marginRight: 50
+  },
+  infoPageHeader: {
+    color: "#77AB9F",
+    fontFamily: "Avenir",
+    textAlign: 'center',
+    fontSize: 23,
+    fontWeight: 'bold'
+  },
+
+  infoPageText: {
+    color: "#fff",
+    fontFamily: "Avenir",
+    textAlign: 'center',
+    fontSize: 17
+  },
+  logoInfo: {
+    width: '50%', 
+    height:'40%', 
+    resizeMode: 'contain', 
+    marginTop: -220,
+    marginBottom: -40
+  },
+  map: {
+    width: 200, 
+    height:200, 
+    resizeMode: 'contain', 
+    marginTop: 30,
+    marginBottom: 40,
+    marginLeft: 30
+  },
+
 
   // MENU BUTTONS
   buttonModal: {
@@ -265,15 +301,6 @@ export default StyleSheet.create({
     marginBottom: 10,
   },
 
-
-  // INFO PAGE
-  logoInfo: {
-    width: '50%', 
-    height:'40%', 
-    resizeMode: 'contain', 
-    marginTop: -200
-  },
-
   // MODAL
   modal: {
     flex: 1,
@@ -297,12 +324,5 @@ export default StyleSheet.create({
     color: "black",
     fontFamily: "headline"
   },
-  map: {
-    width: 200, 
-    height:200, 
-    resizeMode: 'contain', 
-    marginTop: 10,
-    marginBottom: 10,
-    borderRadius: 5
-  },
+  
 });

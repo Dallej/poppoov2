@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, Pressable, Text, Modal, TouchableHighlight } from 'react-native'
+import { View, TextInput, Pressable, Text, Modal, TouchableHighlight,  ScrollView } from 'react-native'
 import { firebase, ROOT_REF, RIDES, USER_RIDES } from '../firebase/Config'
 import styles from '../style/style'
 
