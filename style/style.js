@@ -242,8 +242,8 @@ export default StyleSheet.create({
     width: '50%', 
     height:'40%', 
     resizeMode: 'contain', 
-    marginTop: -220,
-    marginBottom: -40
+    marginTop: -180,
+    marginBottom: -10
   },
   map: {
     width: 200, 

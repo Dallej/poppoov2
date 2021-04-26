@@ -57,6 +57,7 @@ export default class Rides extends React.Component {
         // let rideKeys = Object.keys(this.state.rides);
         
         return (
+            <ScrollView style={{backgroundColor: '#1c1c1c'}}>
             <View style={styles.container}>
 
                 <Text style={styles.ridesHeader}> Current rides </Text>
@@ -150,6 +151,7 @@ export default class Rides extends React.Component {
 
                 </View>
             </View>
+            </ScrollView>
         )
     }
 
