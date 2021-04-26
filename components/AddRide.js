@@ -20,8 +20,9 @@ export default class AddRide extends React.Component {
             time: '',
             mobile:'',
             start:'',
-            end:'',
-            date:''
+            end:''/* ,
+            date:'' needed for database push? if set as other wont show calendar correctly */
+           
         }
     
     }
@@ -36,7 +37,7 @@ export default class AddRide extends React.Component {
             start:start,
             end:end
         })
-        // .then(() => this.props.navigation.navigate('rides'))
+        .then(() => this.props.navigation.navigate('rides'))
         .catch(error => console.log(error))
      } 
 
@@ -61,7 +62,7 @@ export default class AddRide extends React.Component {
                             placeholderTextColor="#838383"
                             autoCapitalize='none'
                             autoCompleteType='name'
-                            maxLength='20'> 
+                            maxLength={20}> 
                         </TextInput>
 
                         <Text style={styles.infotext}>Mobile number</Text>
@@ -75,7 +76,7 @@ export default class AddRide extends React.Component {
                             autoCapitalize='none'
                             keyboardType="phone-pad"
                             autocompletetype="tel"
-                            maxLength='15'>
+                            maxLength={15}>
                             
                         </TextInput>
 

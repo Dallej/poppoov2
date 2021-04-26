@@ -150,7 +150,7 @@ export default StyleSheet.create({
     textAlign: 'left',
   },
   buttonAddride: {
-    marginLeft: '30%',
+    marginLeft: '33%',
     marginTop: 10,
     marginBottom: 30,
     paddingVertical: 5,
@@ -164,8 +164,7 @@ export default StyleSheet.create({
   calendarAddride: {
     fontSize: 16,
     backgroundColor: "#EAEAEA",
-    marginLeft: 40,
-    marginRight: 30,
+    marginLeft: '15%',
     marginTop: 10,
     marginBottom: 10,
     height: 250,
