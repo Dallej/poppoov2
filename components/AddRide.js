@@ -18,19 +18,26 @@ export default class AddRide extends React.Component {
         this.state = {
             name: '',
             time: '',
-            mobile:''
+            mobile:'',
+            start:'',
+            end:''/* ,
+            date:'' needed for database push? if set as other wont show calendar correctly */
+           
         }
     
     }
     
       AddToDatabase = () => {
-        const {name,time,date,mobile} = this.state
+        const {name,time,date,mobile,start,end} = this.state
         firebase.database().ref('/rides').push({
             name: name,
             time:time,
-            mobile:mobile
+            mobile:mobile,
+            date:date,
+            start:start,
+            end:end
         })
-        // .then(() => this.props.navigation.navigate('rides'))
+        .then(() => this.props.navigation.navigate('rides'))
         .catch(error => console.log(error))
      } 
 
@@ -43,7 +50,7 @@ export default class AddRide extends React.Component {
 
                      <View style={styles.containerAddride}>
                 
-                        <Text style={styles.headertext}>Enter your ride information</Text>
+                        <Text style={styles.headertext}>Enter driver information</Text>
 
                         <Text style={styles.infotext}>Drivers name</Text>
 
@@ -53,7 +60,9 @@ export default class AddRide extends React.Component {
                             onChangeText={name=> this.setState({name})}
                             placeholder='Enter your name'
                             placeholderTextColor="#838383"
-                            autoCapitalize='none'> 
+                            autoCapitalize='none'
+                            autoCompleteType='name'
+                            maxLength={20}> 
                         </TextInput>
 
                         <Text style={styles.infotext}>Mobile number</Text>
@@ -66,8 +75,34 @@ export default class AddRide extends React.Component {
                             placeholderTextColor="#838383"
                             autoCapitalize='none'
                             keyboardType="phone-pad"
-                            autocomplete="tel">
+                            autocompletetype="tel"
+                            maxLength={15}>
                             
+                        </TextInput>
+
+
+                        <Text style={styles.headertext}>Enter ride information</Text>
+
+                        <Text style={styles.infotext}>Start point</Text>
+
+                        <TextInput 
+                            style={styles.inputBoxAddride} 
+                            value={this.state.start}
+                            onChangeText={start=> this.setState({start})}
+                            placeholder='Enter ride starting point.'
+                            placeholderTextColor="#838383"
+                            autoCapitalize='none'> 
+                        </TextInput>
+
+                        <Text style={styles.infotext}>End point</Text>
+
+                        <TextInput 
+                            style={styles.inputBoxAddride} 
+                            value={this.state.end}
+                            onChangeText={end=> this.setState({end})}
+                            placeholder='Enter ride arriving point.'
+                            placeholderTextColor="#838383"
+                            autoCapitalize='none'> 
                         </TextInput>
 
                         <Text style={styles.infotext}>Departure time </Text>

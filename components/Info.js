@@ -36,18 +36,26 @@ export default class Info extends React.Component{
             return (
                 <View style={[styles.container, styles.centerpadding]}>
                     <Image style={styles.logoInfo} source={require("../img/OAMKlogo.png")}></Image>
+                    <View style={styles.infoPage}>
+                        <Text style={styles.infoPageHeader}>Purpose of the app:</Text>
+                        <Text style={styles.infoPageText}>This app was made for OAMK's teachers and students to make travelling between 
+                            Oulu and Oulainen easier and more eco-friendly through carpooling.                         
+                        </Text>
 
-
-                    <View>
-                        <Text style={{ fontWeight: "bold", color: "#fff" }}>OAMK Oulu pickup location</Text>
-                        <Text style={{ color: "#fff" }}> Yliopistokatu 9, 90570 Oulu </Text>
-                        <Image style={styles.map} source={require("../img/mapfirst.jpg")}></Image>
+                        <Image style={styles.map} source={require("../img/infoImage.png")}></Image>
+                       
+                        <Text style={styles.infoPageHeader}>Pick up locations:</Text>
+                        <Text style={styles.infoPageText}> Yliopistokatu 9, 90570 Oulu </Text>   
+                        <Text style={styles.infoPageText}> Kuntotie 2, 86300 Oulainen</Text>
                     </View>
 
                     <View>
-                        <Text style={{ fontWeight: "bold", color: "#fff" }}>OAMK Oulainen pickup location</Text>
-                        <Text style={{ color: "#fff" }}> Kuntotie 2, 86300 Oulainen</Text>
+                        
                     </View>
+
+                    <View>
+                        
+                    </View> 
                 </View>
             );
         } 
