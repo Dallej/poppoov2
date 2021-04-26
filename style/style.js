@@ -238,7 +238,7 @@ export default StyleSheet.create({
     fontSize: 17
   },
   logoInfo: {
-    width: '50%', 
+    width: '40%', 
     height:'40%', 
     resizeMode: 'contain', 
     marginTop: -180,
@@ -287,7 +287,8 @@ export default StyleSheet.create({
     margin: 10,
   },
   buttonMenuLogin: {
-    color: "#3761ed",
+    //color: "#3761ed",
+    color: "#F79421",
     fontSize: 21,
     fontFamily: "Avenir"
   },

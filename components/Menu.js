@@ -67,11 +67,8 @@ export default class Menu extends React.Component{
                 </Pressable>
                 </View>
 
-                <View style={styles.footer}>
-                  {/* <Text style={styles.footerText}>THIS IS THE FOOTER</Text> */}
-
-                     <View style={styles.footerText}>
-                    
+                 <View style={styles.footer}>
+                     <View style={styles.footerText}>      
                          <ToggleSwitch
                         label="English"
                         onColor="#81c5c7"
@@ -82,10 +79,10 @@ export default class Menu extends React.Component{
                             this.onToggle(isOnToggleSwitch);
                         }}
                         /> 
-                         <Text style={{ color: "#81c5c7", fontWeight: "500", marginLeft: 125, marginTop: -20 }}>Finnish</Text>
+                         <Text style={{ color: "#F79421", fontWeight: "500", marginLeft: 125, marginTop: -20 }}>Finnish</Text>
                     </View>
+                </View> 
 
-                </View>
                 </View>
               
                 
