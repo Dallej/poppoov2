@@ -47,7 +47,7 @@
         subTitleStyles: {color: "#fff"},
       },
       {
-        backgroundColor: '#1c1c1c',
+        backgroundColor: '#F79421',
         title: 'Enjoy your free trip!',
         image: <Image source={require('../img/tripImage.png')} />,
         subtitle: 'Remember to thank the driver',

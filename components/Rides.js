@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, Pressable, Text, Modal, TouchableHighlight,  ScrollView } from 'react-native'
+import { View, TextInput, Pressable, Text, Modal, TouchableHighlight,  ScrollView, FlatList } from 'react-native'
 import { firebase, ROOT_REF, RIDES, USER_RIDES } from '../firebase/Config'
 import styles from '../style/style'
 
@@ -86,6 +86,7 @@ export default class Rides extends React.Component {
                         </View>
                     </Modal>
 
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
                 {/* if there is no rides in my current rides say: 
                 No rides yet. Offered or joined rides will appear here*/}
 
@@ -115,13 +116,13 @@ export default class Rides extends React.Component {
                         </Pressable>
                     </View>
                 </View>
-
+        </ScrollView>
                 <Text style={styles.ridesHeader}>Available rides</Text>
 
                 {/* Add filter for destination here */}
 
                 {/* When view is clicked it opens a "modal" and a button to join that ride */}
-
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
                 {/* AVAILABLE RIDES VIEWS */}
                 <View style={{ flexDirection: "row" }}>
 
@@ -148,10 +149,11 @@ export default class Rides extends React.Component {
                             <Text style={styles.cardboxButtonText}>VIEW RIDE</Text>
                         </Pressable>
                     </View>
-
                 </View>
-            </View>
-            </ScrollView>
+         </ScrollView>
+
+        </View>
+    </ScrollView>
         )
     }
 
