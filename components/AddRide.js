@@ -33,7 +33,7 @@ export default class AddRide extends React.Component {
             name: name,
             time:time,
             mobile:mobile,
-            date:date,
+            date:Moment?
             start:start,
             end:end
         })
