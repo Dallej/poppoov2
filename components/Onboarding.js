@@ -32,26 +32,26 @@
          backgroundColor: '#fff',
         
         title: 'Welcome to OAMK POPPOO',
-        image: <Image source={require('../img/kuva5.png')} />,
-        subtitle: 'Start by creating an account.',
+        image: <Image source={require('../img/createAccount.png')} />,
+        subtitle: 'Start by creating an account',
       },
       {
-        backgroundColor: '#f1c11a',
+        backgroundColor: '#fff',
        
         title: 'Check out available rides or create your own',
-        image: <Image source={require('../img/kuva6.png')} />,
-        subtitle: 'Join a ride.',
+        image: <Image source={require('../img/JoinRideImage.png')} />,
+        subtitle: 'Join a ride or offer one',
       },
       {
-        backgroundColor: '#999',
+        backgroundColor: '#fff',
         title: 'Enjoy your free trip!',
-        image: <Image source={require('../img/kuva2.png')} />,
-        subtitle: 'Remember to thank the driver.',
+        image: <Image source={require('../img/tripImage.png')} />,
+        subtitle: 'Remember to thank the driver',
       },
       {
         backgroundColor: '#fff',
         title: 'Remember to stay safe!',
-        image: <Image source={require('../img/kuva3.png')} />,
+        image: <Image source={require('../img/staySafe.png')} />,
         subtitle: 'More COVID-19 info: www.thl.fi',
       },
     ]}
