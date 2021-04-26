@@ -242,7 +242,7 @@ export default StyleSheet.create({
     width: '50%', 
     height:'40%', 
     resizeMode: 'contain', 
-    marginTop: -200,
+    marginTop: -220,
     marginBottom: -40
   },
   map: {
@@ -250,7 +250,7 @@ export default StyleSheet.create({
     height:200, 
     resizeMode: 'contain', 
     marginTop: 30,
-    marginBottom: 10,
+    marginBottom: 40,
     marginLeft: 30
   },
 

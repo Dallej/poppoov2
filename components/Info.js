@@ -43,18 +43,19 @@ export default class Info extends React.Component{
                         </Text>
 
                         <Image style={styles.map} source={require("../img/infoImage.png")}></Image>
-                    </View>
-
-                    {/* <View>
-                        <Text style={{ fontWeight: "bold", color: "#fff" }}>OAMK Oulu pickup location</Text>
-                        <Text style={{ color: "#fff" }}> Yliopistokatu 9, 90570 Oulu </Text>
-                        <Image style={styles.map} source={require("../img/mapfirst.jpg")}></Image>
+                       
+                        <Text style={styles.infoPageHeader}>Pick up locations:</Text>
+                        <Text style={styles.infoPageText}> Yliopistokatu 9, 90570 Oulu </Text>   
+                        <Text style={styles.infoPageText}> Kuntotie 2, 86300 Oulainen</Text>
                     </View>
 
                     <View>
-                        <Text style={{ fontWeight: "bold", color: "#fff" }}>OAMK Oulainen pickup location</Text>
-                        <Text style={{ color: "#fff" }}> Kuntotie 2, 86300 Oulainen</Text>
-                    </View> */}
+                        
+                    </View>
+
+                    <View>
+                        
+                    </View> 
                 </View>
             );
         } 
