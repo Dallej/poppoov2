@@ -107,13 +107,14 @@ export default class Rides extends React.Component {
                         </View>
                     </Modal>
 
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
+                 <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
                 {/* if there is no rides in my current rides say: 
                 No rides yet. Offered or joined rides will appear here*/}
 
                 {/* MY CURRENT RIDES VIEWS */}
                 <View style={{ flexDirection: "row" }}>
 
+        {/* ----> TÄSSÄ PITÄISI NÄYTTÄÄ TIETOKANNASTA TULEVA DATA */}
                  {  
                 this.state.rides && 
                 this.state.rides.map( rides => {
@@ -150,13 +151,13 @@ export default class Rides extends React.Component {
                         </Pressable>
                     </View>
                 </View>
-        </ScrollView>
+            </ScrollView>
                 <Text style={styles.ridesHeader}>Available rides</Text>
 
                 {/* Add filter for destination here */}
 
                 {/* When view is clicked it opens a "modal" and a button to join that ride */}
-        <ScrollView horizontal={true}>
+            <ScrollView horizontal={true}>
                 {/* AVAILABLE RIDES VIEWS */}
                 <View style={{ flexDirection: "row" }}>
 
@@ -170,10 +171,7 @@ export default class Rides extends React.Component {
                                 this.toggleModal(!this.state.modalVisible)}}>
                             <Text style={styles.cardboxButtonText}>VIEW RIDE</Text>
                         </Pressable>
-                    </View>
-                    
-                        
-                    
+                    </View>          
 
                     <View style={styles.cardbox}>
                         <Text style={styles.cardboxText}> Driver: Anssi</Text>
