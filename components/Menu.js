@@ -5,6 +5,8 @@ import styles from '../style/style';
 
 
  import ToggleSwitch from 'toggle-switch-react-native';
+ import { MaterialIcons } from '@expo/vector-icons';
+ import { FontAwesome } from '@expo/vector-icons';
 
 
 // import {OAMKlogo} from '../img/OAMKlogo'
@@ -47,24 +49,24 @@ export default class Menu extends React.Component{
                 
                 <View style={styles.menuButtons}>
                 <Pressable style={styles.IconButton} onPress={() => this.props.navigation.navigate('rides')}>
-                    <Text style={styles.buttonTextMenu}>View rides</Text>
+                    <Text style={styles.buttonTextMenu}> <MaterialIcons name="directions-car" size={14} color="orange" />  View rides</Text>
                 </Pressable>
                 </View>
 
                 <View style={styles.menuButtons}>
                 <Pressable style={styles.IconButton} onPress={() => this.props.navigation.navigate('addride')}>
-                    <Text style={styles.buttonTextMenu}>Offer a ride</Text>
+                    <Text style={styles.buttonTextMenu}> <FontAwesome name="plus" size={14} color="orange" />  Offer a ride</Text>
                 </Pressable>
                 </View>
                 <View style={styles.menuButtons}>
                     <Pressable style={styles.IconButton} onPress={() => this.props.navigation.navigate('info')}>
-                         <Text style={styles.buttonTextMenu}>Info</Text>
+                         <Text style={styles.buttonTextMenu}> <FontAwesome name="info" size={14} color="orange" />  Info</Text>
                     </Pressable>
                 </View>
                 
                 <View style={styles.menuButtons}>
                 <Pressable onPress={() => this.props.navigation.navigate('login')}>
-                    <Text style={styles.buttonMenuLogin}>Login</Text>
+                    <Text style={styles.buttonMenuLogin}> <MaterialIcons name="login" size={14} color="orange" />  Login</Text>
                 </Pressable>
                 </View>
 
