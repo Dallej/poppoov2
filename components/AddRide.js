@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Pressable, Text, TextInput,TouchableWithoutFeedback, ScrollView} from 'react-native'
 import Calendar from 'react-native-calendar-datepicker';
-import Moment from 'moment';
+import moment from 'moment';
 
 import {firebase, RIDES} from '../firebase/Config'
 require('firebase/auth')
@@ -11,7 +11,6 @@ import {Keyboard} from 'react-native'
 import Rides from './Rides';
 import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
-import moment from 'moment';
 
 export default class AddRide extends React.Component {
 
@@ -19,11 +18,11 @@ export default class AddRide extends React.Component {
     constructor() {
         super();
         this.state = {
-            date:moment().format(),
             name: '',
-            time: '',
             mobile:'',
+            time: '',
             start:'',
+            date:moment().format(),
             end:''
            
         }
@@ -36,8 +35,8 @@ export default class AddRide extends React.Component {
             name: name,
             time:time,
             mobile:mobile,
-            date:moment().format(),
             start:start,
+            date:moment().format(),
             end:end
         })
         .then(() => this.props.navigation.navigate('rides'))
@@ -47,7 +46,7 @@ export default class AddRide extends React.Component {
     render() {
 
         const {date} = this.state;
-        const selectedDate = date ? date.toString():'';
+        const selectedDate = date?date.toString():'';
         
         
         return (
