@@ -72,7 +72,7 @@ export default class Rides extends React.Component {
                         />
                         ))
                     ) : (
-                        <Text style={styles.infoText}>There are no rides</Text>
+                        <Text style={styles.ridesInfo}>There are no rides</Text>
                     )}
                 
                 </View>

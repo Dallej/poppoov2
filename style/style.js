@@ -167,7 +167,7 @@ export default StyleSheet.create({
     marginLeft: '15%',
     marginTop: 10,
     marginBottom: 10,
-    height: 250,
+    height: 280,
     width: 250,
     borderColor: '#474747',
     borderWidth: 2,
@@ -215,6 +215,11 @@ export default StyleSheet.create({
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
     marginTop: 10,
+  },
+  ridesInfo: {
+    color: "#fff",
+    fontSize: 16,
+    fontFamily: "Avenir"
   },
 
   // INFO PAGE
@@ -292,31 +297,6 @@ export default StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
   },
-
-  // MODAL
-  modal: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: '#1c1c1c',
-    padding: 100,
-  },
-  modalText: {
-    color: "#b8b8b8",
-    margin: 7,
-    fontSize: 21,
-  },
-  buttonModal: {
-    marginTop: 10,
-    marginBottom: 10,
-    paddingVertical: 5,
-    alignItems: 'center',
-    backgroundColor: '#77AB9F',
-    borderColor: '#77AB9F',
-    borderWidth: 1,
-    borderRadius: 5,
-    width: 150,
-  },
-
 
   // OTHER STYLES
   textStyle: {

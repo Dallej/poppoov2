@@ -64,8 +64,8 @@ export default class AddRide extends React.Component {
                             onChangeText={name=> this.setState({name})}
                             placeholder='Enter your name'
                             placeholderTextColor="#838383"
-                            autoCapitalize='none'
-                            autoCompleteType='name'
+                            autoCapitalize='words'
+                            autoCompleteType='name'                           
                             maxLength={20}> 
                         </TextInput>
 
@@ -80,6 +80,7 @@ export default class AddRide extends React.Component {
                             autoCapitalize='none'
                             keyboardType="phone-pad"
                             autocompletetype="tel"
+                            textContentType="telephoneNumber"
                             maxLength={15}>
                             
                         </TextInput>
@@ -95,7 +96,7 @@ export default class AddRide extends React.Component {
                             onChangeText={start=> this.setState({start})}
                             placeholder='Enter ride starting point.'
                             placeholderTextColor="#838383"
-                            autoCapitalize='none'> 
+                            autoCapitalize='characters'> 
                         </TextInput>
 
                         <Text style={styles.infotext}> <MaterialIcons name="gps-fixed" size={14} color="orange" />  End point</Text>
@@ -106,7 +107,7 @@ export default class AddRide extends React.Component {
                             onChangeText={end=> this.setState({end})}
                             placeholder='Enter ride arriving point.'
                             placeholderTextColor="#838383"
-                            autoCapitalize='none'> 
+                            autoCapitalize='characters'> 
                         </TextInput>
 
                         <Text style={styles.infotext}><FontAwesome name="clock-o" size={14} color="orange" />  Departure time </Text>
