@@ -214,7 +214,7 @@ export default StyleSheet.create({
     height:30,
     borderBottomLeftRadius: 10,
     borderBottomRightRadius: 10,
-    marginTop: 30,
+    marginTop: 10,
   },
 
   // INFO PAGE

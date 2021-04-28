@@ -1,37 +1,30 @@
 import React, { useState } from 'react';
-import { View, TextInput, Pressable, Text, Modal, TouchableHighlight } from 'react-native'
+import { View, TextInput, Pressable, Text, Modal, TouchableHighlight, StyleSheet } from 'react-native'
 import { firebase, ROOT_REF, RIDES, USER_RIDES } from '../firebase/Config'
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import styles from '../style/style'
 
-export const RidesItem = ({ ridesItem: {ridesItem: title, done }, id}) => {
+export const RideItem = ({rideItem: {rideItem: 
+    date, end, mobile, name, start, time}}) => {
 
-const [doneState, setDone] = useState(done);
+  
+    return (
+        
+      <View style={styles.cardbox}>
+        <Text style={styles.cardboxHeader}> Driver: {name}</Text>
+        <Text style={styles.cardboxText}> {start} - {end}</Text>  
+        <Text style={styles.cardboxText}> Date: {date} </Text> 
+        <Text style={styles.cardboxText}> Departure: {time} </Text>    
+        <Text style={styles.cardboxText}> Mobile: {mobile}</Text>
+        <Text style={styles.cardboxText}> Seats Left:</Text>
 
-const onCheck = () => {
-    setDone(!doneState);
-    firebase.ref(RIDES).update({
-        [id]: {
-            ridesItem: title,
-            done: !doneState,
-        },
-    });
-};
+        <Pressable style={styles.cardButton} onPress={() => {}}>
+            <Text style={styles.cardboxButtonText}>JOIN RIDE</Text>
+        </Pressable>        
+      </View>
 
-const onRemove = () => {
-    firebase.ref(RIDES + [id]).remove();
-};
-
-return (
-    <View>
-            <Text onPress={onCheck}
-            style={
-                [
-                {backgroundColor: doneState ? "lightgreen" : "lightblue"}]}>
-                {title}
-                </Text>
-                <Entypo name={"trash"} size={32} onPress={onRemove} />
-    </View>
-)
-
-
-}
+      
+      
+    );
+  }
+  
