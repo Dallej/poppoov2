@@ -128,7 +128,7 @@ export default StyleSheet.create({
   headertext:{
     fontSize:18,
     marginBottom:40,
-    marginTop: 60,
+    marginTop: 20,
     color:"#EAEAEA",
     textAlign: 'center'
   },
