@@ -11,6 +11,7 @@ import {Keyboard} from 'react-native'
 import Rides from './Rides';
 import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
+import moment from 'moment';
 
 export default class AddRide extends React.Component {
 
@@ -18,12 +19,12 @@ export default class AddRide extends React.Component {
     constructor() {
         super();
         this.state = {
+            date:moment().format(),
             name: '',
             time: '',
             mobile:'',
             start:'',
-            end:''/* ,
-            date:'' needed for database push? if set as other wont show calendar correctly */
+            end:''
            
         }
     
@@ -35,7 +36,7 @@ export default class AddRide extends React.Component {
             name: name,
             time:time,
             mobile:mobile,
-            date:Moment?
+            date:moment().format(),
             start:start,
             end:end
         })
@@ -45,6 +46,9 @@ export default class AddRide extends React.Component {
 
     render() {
 
+        const {date} = this.state;
+        const selectedDate = date?date.toString():'';
+        
         
         return (
             <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -124,9 +128,10 @@ export default class AddRide extends React.Component {
                         style={styles.calendarAddride}
                         onChange={(date)=> this.setState({date})}
                         selected={this.state.date}
-                        minDate={Moment().startOf('day')}
-                        maxDate={Moment().add(10,'years').startOf('day')}
+                        minDate={moment().startOf('day')}
+                        maxDate={moment().add(10,'years').startOf('day')}
                         />
+                        <Text>Selected date:{selectedDate}</Text>
 
                         <Pressable style={styles.buttonAddride} onPress={this.AddToDatabase}>
                             <Text style={styles.buttonText}>Offer a ride </Text>
