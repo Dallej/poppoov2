@@ -5,9 +5,6 @@ import { firebase, ROOT_REF, RIDES, USER_RIDES } from '../firebase/Config'
 import { RideItem } from '../components/Ridesitems';
 import styles from '../style/style'
 
-
-
-
 export default class Rides extends React.Component {
 
     constructor() {
@@ -27,21 +24,20 @@ export default class Rides extends React.Component {
         });
       }
 
-
     render() {
 
         let ridesKeys = Object.keys(this.state.rides);
         
         return (
+
             <ScrollView style={{backgroundColor: '#1c1c1c'}}>
-            <View style={styles.container}>
+            <View style={styles.container}>       
 
-                <Text style={styles.ridesHeader}> Current rides </Text>
+        {/* MY CURRENT RIDES VIEWS */}
 
+            <Text style={styles.ridesHeader}> Current rides </Text>
 
-                 <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
-
-                {/* MY CURRENT RIDES VIEWS */}
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
                 <View style={{ flexDirection: "row" }}>
                               
                     <View style={styles.cardbox}>
@@ -53,33 +49,36 @@ export default class Rides extends React.Component {
                         <Pressable style={styles.cardButton} onPress={() => {}}>
                             <Text style={styles.cardboxButtonText}>VIEW RIDE</Text>
                         </Pressable>
-                    </View> 
-                    
+                    </View>  
+
                 </View>
             </ScrollView>
-                <Text style={styles.ridesHeader}>Available rides</Text>
-
-            <ScrollView horizontal={true}>
-                {/* AVAILABLE RIDES VIEWS */}
-                <View style={{ flexDirection: "row" }}>
-
-                          {ridesKeys.length > 0 ? (
-                        ridesKeys.map(key => (
-                        <RideItem
-                            key={key}
-                            id={key}
-                            rideItem={this.state.rides[key]}
-                        />
-                        ))
-                    ) : (
-                        <Text style={styles.ridesInfo}>There are no rides</Text>
-                    )}
                 
-                </View>
-         </ScrollView>
+        
+        {/* AVAILABLE RIDES VIEWS */}
 
-        </View>
-    </ScrollView>
+            <Text style={styles.ridesHeader}>Available rides</Text>
+
+                <ScrollView horizontal={true}>
+                    <View style={{ flexDirection: "row" }}>
+
+                        {ridesKeys.length > 0 ? (
+                            ridesKeys.map(key => (
+                            <RideItem
+                                key={key}
+                                id={key}
+                                rideItem={this.state.rides[key]}
+                            />
+                            ))
+                        ) : (
+                            <Text style={styles.ridesInfo}>There are no rides</Text>
+                        )}
+
+                    </View>
+            </ScrollView>
+
+            </View>
+        </ScrollView>
         )
     }
 
