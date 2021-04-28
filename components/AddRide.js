@@ -47,7 +47,7 @@ export default class AddRide extends React.Component {
     render() {
 
         const {date} = this.state;
-        const selectedDate = date?date.toString():'';
+        const selectedDate = date ? date.toString():'';
         
         
         return (
