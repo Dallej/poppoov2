@@ -130,7 +130,6 @@ export default class AddRide extends React.Component {
                         minDate={moment().startOf('day')}
                         maxDate={moment().add(10,'years').startOf('day')}
                         />
-                        <Text>Selected date:{selectedDate}</Text>
 
                         <Pressable style={styles.buttonAddride} onPress={this.AddToDatabase}>
                             <Text style={styles.buttonText}>Offer a ride </Text>
