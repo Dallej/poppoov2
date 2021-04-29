@@ -42,6 +42,7 @@ export default class AddRide extends React.Component {
         .then(() => this.props.navigation.navigate('rides'))
         .catch(error => console.log(error))
      } 
+     
 
     render() {
 
