@@ -85,14 +85,23 @@ export default class App extends React.Component {
 
           <Stack.Screen name="rides" component={Rides}
           options={{
-            title:"Available rides",
+            title:"Rides",
             headerTitle:"Available rides",
             headerTintColor: '#fff',
             headerStyle: {
               backgroundColor: '#77AB9F',
             }
-          }}
+           }}
           >
+           {/*  <Stack.Screen name="rides" component={Rides}
+          options={({ route }) => ({ title: route.params.title,
+            //headerTitle:"Available rides",
+            headerTintColor: '#fff',
+            headerStyle: {
+              backgroundColor: '#77AB9F',
+            }
+           })}
+          > */}
           </Stack.Screen>
 
           <Stack.Screen name="addride" component={AddRide}
@@ -113,7 +122,7 @@ export default class App extends React.Component {
             headerTitle:"Info",
             headerTintColor: '#fff',
             headerStyle: {
-              backgroundColor: '#292929',
+              backgroundColor: '#77AB9F',
             }
           }}
           >
@@ -125,7 +134,7 @@ export default class App extends React.Component {
             headerTitle:"Login",
             headerTintColor: '#fff',
             headerStyle: {
-              backgroundColor: '#292929',
+              backgroundColor: '#77AB9F',
             }
           }}
           >

@@ -219,7 +219,8 @@ export default StyleSheet.create({
   ridesInfo: {
     color: "#fff",
     fontSize: 16,
-    fontFamily: "Avenir"
+    fontFamily: "Avenir",
+    margin: 50
   },
 
   // INFO PAGE
