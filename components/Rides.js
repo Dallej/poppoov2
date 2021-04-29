@@ -40,7 +40,7 @@ export default class Rides extends React.Component {
                 <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
                 <View style={{ flexDirection: "row" }}>
                               
-                    <View style={styles.cardbox}>
+                    {/* <View style={styles.cardbox}>
                         <Text style={styles.cardboxHeader}> Driver:</Text>
                         <Text style={styles.cardboxText}> OULU - OULAINEN </Text>
                         <Text style={styles.cardboxText}> 24 Mar 2021 </Text>
@@ -49,7 +49,8 @@ export default class Rides extends React.Component {
                         <Pressable style={styles.cardButton} onPress={() => {}}>
                             <Text style={styles.cardboxButtonText}>VIEW RIDE</Text>
                         </Pressable>
-                    </View>  
+                    </View>   */}
+                    <Text style={styles.ridesInfo}>You have not joined any rides.</Text>
 
                 </View>
             </ScrollView>

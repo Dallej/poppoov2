@@ -33,7 +33,7 @@ export default class Login extends React.Component {
                 //setLoginState("Sign Out")
                 // ...
               })
-            .then(() => this.props.navigation.navigate('menu'))
+            .then(() => this.props.navigation.navigate('rides', {title:"Welcome " + email}))
             .catch(error => console.log(error))
 
             user.providerData.forEach((userInfo) => {
