@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Pressable, Text, TextInput,TouchableWithoutFeedback, ScrollView} from 'react-native'
 import Calendar from 'react-native-calendar-datepicker';
 import moment from 'moment';
@@ -11,9 +11,13 @@ import {Keyboard} from 'react-native'
 import Rides from './Rides';
 import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
+import DropDownPicker from 'react-native-dropdown-picker';
+
+
+
 
 export default class AddRide extends React.Component {
-
+    
 
     constructor() {
         super();
@@ -23,21 +27,23 @@ export default class AddRide extends React.Component {
             time: '',
             start:'',
             date:moment().format(),
-            end:''
+            end:'',
+            seats: 4
            
         }
     
     }
     
       AddToDatabase = () => {
-        const {name,time,date,mobile,start,end} = this.state
+        const {name,time,date,mobile,start,end,seats} = this.state
         firebase.database().ref('/rides').push({
             name: name,
             time:time,
             mobile:mobile,
             start:start,
             date: moment(this.state.date).format('DD.MM.YYYY'),
-            end:end
+            end:end,
+            seats:seats
         })
         .then(() => this.props.navigation.navigate('rides'))
         .catch(error => console.log(error))
@@ -47,8 +53,7 @@ export default class AddRide extends React.Component {
 
         const {date} = this.state;
         const selectedDate = date?date.toString():'';
-        
-        
+
         return (
             <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
                 <ScrollView style={{backgroundColor: '#1c1c1c'}} >
@@ -111,7 +116,7 @@ export default class AddRide extends React.Component {
 
                         <Text style={styles.infotext}><FontAwesome name="clock-o" size={14} color="orange" />  Departure time </Text>
 
-                        <TextInput 
+                         <TextInput 
                             style={styles.inputBoxAddride} 
                             value={this.state.time}
                             onChangeText={time=> this.setState({time})}
@@ -119,8 +124,27 @@ export default class AddRide extends React.Component {
                             placeholderTextColor="#838383"
                             autoCapitalize='none'
                             keyboardType="decimal-pad"
-                            type="time"> 
-                        </TextInput>
+                            type="time">                 
+                        </TextInput> 
+
+                        <Text style={styles.infotext}>Seats</Text>
+                            <DropDownPicker items={[
+                            { label: "1 seat", value: 1 },
+                            { label: "2 seats", value: 2 },
+                            { label: "3 seats", value: 3 },
+                            { label: "4 seats", value: 4 },
+                            { label: "5 seats", value: 5 },
+                            { label: "6 seats", value: 6 }
+                            ]}
+                            defaultValue={this.state.seats}
+                            style={styles.dropDown} 
+                            onChangeItem={item => this.setState({seats: item.value})}
+                            labelStyle={{
+                                fontSize: 14,
+                                textAlign: 'left',
+                                color: '#000',
+                            }}
+                            ></DropDownPicker>
 
                         <Text style={styles.infotext}> <FontAwesome name="calendar" size={14} color="orange" />  Select date </Text>
 

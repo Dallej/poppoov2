@@ -149,6 +149,12 @@ export default StyleSheet.create({
     borderRadius: 5,
     textAlign: 'left',
   },
+  dropDown: {
+    width: '25%',
+    marginLeft: '15%',
+    marginTop: 10,
+    marginBottom: 20,
+  },
   buttonAddride: {
     marginLeft: '33%',
     marginTop: 10,
@@ -189,8 +195,8 @@ export default StyleSheet.create({
     borderWidth: 1,
     borderColor: "#000000",
     margin: 10,
-    width: 160,
-    height: 160,
+    width: 180,
+    height: 180,
     textAlign: "center",
     justifyContent: "center",
   },
