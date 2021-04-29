@@ -48,6 +48,7 @@ export default class AddRide extends React.Component {
         .then(() => this.props.navigation.navigate('rides'))
         .catch(error => console.log(error))
      } 
+     
 
     render() {
 
@@ -70,7 +71,7 @@ export default class AddRide extends React.Component {
                             placeholderTextColor="#838383"
                             autoCapitalize='words'
                             autoCompleteType='name'                           
-                            maxLength={20}> 
+                            maxLength={15}> 
                         </TextInput>
 
                         <Text style={styles.infotext}><FontAwesome name="mobile-phone" size={14} color="orange" />  Mobile number</Text>

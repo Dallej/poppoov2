@@ -29,7 +29,7 @@ export default class Login extends React.Component {
                 var user = userCredential.user;
                 var name = user.displayName;
                 alert("Logged-in successfully", "test")
-                console.log('User logged-in successfully!', {email})
+                console.log('User logged in successfully!', {email})
                 //setLoginState("Sign Out")
                 // ...
               })
@@ -43,7 +43,7 @@ export default class Login extends React.Component {
 
     signOut = () => {firebase.auth().signOut()
             .then(() => {
-                alert("Sign-out successful.")
+                alert("Sign out successful.")
                 this.props.navigation.navigate('login')}
                 )
             .catch(error => console.log(error))
