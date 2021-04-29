@@ -4,7 +4,7 @@ import { firebase, ROOT_REF, RIDES, USER_RIDES } from '../firebase/Config'
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import styles from '../style/style'
 
-export const RideItem = ({rideItem: {rideItem: 
+export const RideItem = ({rideItem: { 
     date, end, mobile, name, start, time}}) => {
 
   
