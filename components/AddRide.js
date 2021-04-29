@@ -128,7 +128,7 @@ export default class AddRide extends React.Component {
                             type="time">                 
                         </TextInput> 
 
-                        <Text style={styles.infotext}>Seats</Text>
+                        <Text style={styles.infotext}><MaterialIcons name="event-seat" size={14} color="orange" />  Seats</Text>
                             <DropDownPicker items={[
                             { label: "1 seat", value: 1 },
                             { label: "2 seats", value: 2 },
