@@ -138,7 +138,10 @@ export default class AddRide extends React.Component {
                             { label: "6 seats", value: 6 }
                             ]}
                             defaultValue={this.state.seats}
-                            style={styles.dropDown} 
+                            style={styles.dropDown}
+                            dropDownStyle={{
+                            width: '2.1%',
+                            marginLeft: '15%'}}
                             onChangeItem={item => this.setState({seats: item.value})}
                             labelStyle={{
                                 fontSize: 14,
