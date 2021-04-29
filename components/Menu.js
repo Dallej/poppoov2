@@ -60,7 +60,7 @@ export default class Menu extends React.Component{
                 </View>
                 <View style={styles.menuButtons}>
                     <Pressable style={styles.IconButton} onPress={() => this.props.navigation.navigate('info')}>
-                         <Text style={styles.buttonTextMenu}> <FontAwesome name="info" size={14} color="orange" />  Info</Text>
+                         <Text style={styles.buttonTextMenu}> <FontAwesome name="info" size={14} color="orange" />  Information</Text>
                     </Pressable>
                 </View>
                 
