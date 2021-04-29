@@ -36,7 +36,7 @@ export default class AddRide extends React.Component {
             time:time,
             mobile:mobile,
             start:start,
-            date:moment().format(),
+            date: moment(this.state.date).format('DD.MM.YYYY'),
             end:end
         })
         .then(() => this.props.navigation.navigate('rides'))
