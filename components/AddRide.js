@@ -29,7 +29,7 @@ export default class AddRide extends React.Component {
             date:moment().format(),
             end:'',
             seats: 4,
-            nameError: '',
+            nameError: "",
             phoneError: '',
             startError:'',
             endError: '',
@@ -52,7 +52,19 @@ export default class AddRide extends React.Component {
         })
         .then(() => this.props.navigation.navigate('rides'))
         .catch(error => console.log(error))
-     } 
+     }
+
+     validate(){
+         if (this.state.name.trim()!==""&&
+         this.state.nickname.trim()!==""&&
+         this.state.description.trim()!==""){
+             return true;
+         }
+         else{
+             return false;
+         }
+     }
+
      
     nameValidator(){
          if(this.state.name==""){
