@@ -179,6 +179,11 @@ export default StyleSheet.create({
     borderWidth: 2,
     borderRadius: 10,
   },
+  errorMessage: {
+    color: 'red',
+    marginLeft: '15%',
+    marginBottom: 20
+  },
 
 
   // AVAILABLE RIDES PAGE
