@@ -7,6 +7,7 @@ import {
   Modal,
   TouchableHighlight,
   StyleSheet,
+  DrawerLayoutAndroidBase,
 } from "react-native";
 import { firebase, ROOT_REF, RIDES, USER_RIDES } from "../firebase/Config";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
@@ -15,6 +16,15 @@ import styles from "../style/style";
 export const RideItem = ({
   rideItem: { date, end, mobile, name, start, time, seats },
 }) => {
+  addUserToRide = () => {
+    const user = firebase.auth().currentUser;
+    firebase
+      .ref(USER_RIDES + this.state.name + USER_RIDES + this.state.user)
+      .set({
+        isActive: true,
+      });
+  };
+
   return (
     <View style={styles.cardbox}>
       <Text style={styles.cardboxHeader}> Driver: {name}</Text>
