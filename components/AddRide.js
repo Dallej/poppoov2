@@ -28,7 +28,12 @@ export default class AddRide extends React.Component {
             start:'',
             date:moment().format(),
             end:'',
-            seats: 4
+            seats: 4,
+            nameError: '',
+            phoneError: '',
+            startError:'',
+            endError: '',
+            timeError: ''
            
         }
     
@@ -49,6 +54,45 @@ export default class AddRide extends React.Component {
         .catch(error => console.log(error))
      } 
      
+    nameValidator(){
+         if(this.state.name==""){
+             this.setState({nameError: "Name field can not be empty"})
+         }else{
+             this.setState({nameError:""})
+         }
+     }
+
+     phoneValidator(){
+        if(this.state.mobile==""){
+            this.setState({phoneError: "Mobile number field can not be empty"})
+        }else{
+            this.setState({phoneError:""})
+        }
+    }
+
+        startValidator(){
+            if(this.state.start==""){
+                this.setState({startError: "Start point field can not be empty"})
+            }else{
+                this.setState({startError:""})
+            }
+        }
+
+        endValidator(){
+            if(this.state.end==""){
+                this.setState({endError: "End point field can not be empty"})
+            }else{
+                this.setState({endError:""})
+            }
+        }
+
+        timeValidator(){
+            if(this.state.time==""){
+                this.setState({timeError: "Departure time can not be empty"})
+            }else{
+                this.setState({timeError:""})
+            }
+        }
 
     render() {
 
@@ -66,6 +110,7 @@ export default class AddRide extends React.Component {
                         <TextInput 
                             style={styles.inputBoxAddride} 
                             value={this.state.name}
+                            onBlur= {() => this.nameValidator()}
                             onChangeText={name=> this.setState({name})}
                             placeholder='Enter your name'
                             placeholderTextColor="#838383"
@@ -73,12 +118,14 @@ export default class AddRide extends React.Component {
                             autoCompleteType='name'                           
                             maxLength={15}> 
                         </TextInput>
+                        <Text style={styles.errorMessage}>{this.state.nameError}</Text>
 
                         <Text style={styles.infotext}><FontAwesome name="mobile-phone" size={14} color="orange" />  Mobile number</Text>
 
                         <TextInput 
                             style={styles.inputBoxAddride} 
                             value={this.state.mobile}
+                            onBlur= {() => this.phoneValidator()}
                             onChangeText={mobile=> this.setState({mobile})}
                             placeholder='Enter your mobile number'
                             placeholderTextColor="#838383"
@@ -89,6 +136,7 @@ export default class AddRide extends React.Component {
                             maxLength={15}>
                             
                         </TextInput>
+                        <Text style={styles.errorMessage}>{this.state.phoneError}</Text>
 
 
                         <Text style={styles.headertext}>Enter ride information</Text>
@@ -98,28 +146,33 @@ export default class AddRide extends React.Component {
                         <TextInput 
                             style={styles.inputBoxAddride} 
                             value={this.state.start}
+                            onBlur= {() => this.startValidator()}
                             onChangeText={start=> this.setState({start})}
                             placeholder='Enter ride starting point.'
                             placeholderTextColor="#838383"
                             autoCapitalize='characters'> 
                         </TextInput>
+                        <Text style={styles.errorMessage}>{this.state.startError}</Text>
 
                         <Text style={styles.infotext}> <MaterialIcons name="gps-fixed" size={14} color="orange" />  End point</Text>
 
                         <TextInput 
                             style={styles.inputBoxAddride} 
                             value={this.state.end}
+                            onBlur= {() => this.endValidator()}
                             onChangeText={end=> this.setState({end})}
                             placeholder='Enter ride arriving point.'
                             placeholderTextColor="#838383"
                             autoCapitalize='characters'> 
                         </TextInput>
+                        <Text style={styles.errorMessage}>{this.state.endError}</Text>
 
                         <Text style={styles.infotext}><FontAwesome name="clock-o" size={14} color="orange" />  Departure time </Text>
 
                          <TextInput 
                             style={styles.inputBoxAddride} 
                             value={this.state.time}
+                            onBlur= {() => this.timeValidator()}
                             onChangeText={time=> this.setState({time})}
                             placeholder='Enter departure time '
                             placeholderTextColor="#838383"
@@ -127,6 +180,7 @@ export default class AddRide extends React.Component {
                             keyboardType="decimal-pad"
                             type="time">                 
                         </TextInput> 
+                        <Text style={styles.errorMessage}>{this.state.timeError}</Text>
 
                         <Text style={styles.infotext}><MaterialIcons name="event-seat" size={14} color="orange" />  Seats</Text>
                             <DropDownPicker items={[
