@@ -1,86 +1,79 @@
-import React, { useState } from 'react';
-import { View, TextInput, Pressable, Text, Modal, TouchableHighlight,  ScrollView, FlatList } from 'react-native'
-import { createIconSetFromFontello } from 'react-native-vector-icons';
-import { firebase, ROOT_REF, RIDES, USER_RIDES } from '../firebase/Config'
-import { RideItem } from '../components/Ridesitems';
-import styles from '../style/style'
+import React, { useState } from "react";
+import {
+  View,
+  TextInput,
+  Pressable,
+  Text,
+  Modal,
+  TouchableHighlight,
+  ScrollView,
+  FlatList,
+} from "react-native";
+import { createIconSetFromFontello } from "react-native-vector-icons";
+import { firebase, ROOT_REF, RIDES, USER_RIDES } from "../firebase/Config";
+import { RideItem } from "../components/Ridesitems";
+import styles from "../style/style";
 
 export default class Rides extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      rides: {},
+    };
+  }
 
-    constructor() {
-        super();
-        this.state = {
-          rides: {}
-        };
-      }
- 
-    componentDidMount() {
-        firebase.database().ref(RIDES).on('value', querySnapShot => {
-          let data = querySnapShot.val() ? querySnapShot.val() : {};
-          let rideItems = {...data};
-          this.setState({
-            rides: rideItems,
-          });
+  componentDidMount() {
+    firebase
+      .database()
+      .ref(RIDES)
+      .on("value", (querySnapShot) => {
+        let data = querySnapShot.val() ? querySnapShot.val() : {};
+        let rideItems = { ...data };
+        this.setState({
+          rides: rideItems,
         });
-      }
+      });
+  }
 
-    render() {
+  render() {
+    let ridesKeys = Object.keys(this.state.rides);
 
-        let ridesKeys = Object.keys(this.state.rides);
-        
-        return (
+    return (
+      <ScrollView style={{ backgroundColor: "#1c1c1c" }}>
+        <View style={styles.container}>
+          {/* MY CURRENT RIDES VIEWS */}
 
-            <ScrollView style={{backgroundColor: '#1c1c1c'}}>
-            <View style={styles.container}>       
+          <Text style={styles.ridesHeader}> Current rides </Text>
 
-        {/* MY CURRENT RIDES VIEWS */}
-
-            <Text style={styles.ridesHeader}> Current rides </Text>
-
-                <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
-                <View style={{ flexDirection: "row" }}>
-                              
-                    {/* <View style={styles.cardbox}>
-                        <Text style={styles.cardboxHeader}> Driver:</Text>
-                        <Text style={styles.cardboxText}> OULU - OULAINEN </Text>
-                        <Text style={styles.cardboxText}> 24 Mar 2021 </Text>
-                        <Text style={styles.cardboxText}> Departure: </Text>
-                        <Text style={styles.cardboxText}> Seats left: </Text>
-                        <Pressable style={styles.cardButton} onPress={() => {}}>
-                            <Text style={styles.cardboxButtonText}>VIEW RIDE</Text>
-                        </Pressable>
-                    </View>   */}
-                    <Text style={styles.ridesInfo}>You have not joined any rides.</Text>
-
-                </View>
-            </ScrollView>
-                
-        
-        {/* AVAILABLE RIDES VIEWS */}
-
-            <Text style={styles.ridesHeader}>Available rides</Text>
-
-                <ScrollView horizontal={true}>
-                    <View style={{ flexDirection: "row" }}>
-
-                        {ridesKeys.length > 0 ? (
-                            ridesKeys.map(key => (
-                            <RideItem
-                                key={key}
-                                id={key}
-                                rideItem={this.state.rides[key]}
-                            />
-                            ))
-                        ) : (
-                            <Text style={styles.ridesInfo}>There are no rides</Text>
-                        )}
-
-                    </View>
-            </ScrollView>
-
+          <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
+            <View style={{ flexDirection: "row" }}>
+              <Text style={styles.ridesInfo}>
+                You have not joined any rides.
+              </Text>
             </View>
-        </ScrollView>
-        )
-    }
+          </ScrollView>
 
+          {/* AVAILABLE RIDES VIEWS */}
+
+          <Text style={styles.ridesHeader}>Available rides</Text>
+
+          <ScrollView horizontal={true}>
+            <View style={{ flexDirection: "row" }}>
+              {ridesKeys.length > 0 ? (
+                ridesKeys.map((key) => (
+                  <RideItem
+                    key={key}
+                    id={key}
+                    rideItem={this.state.rides[key]}
+                  />
+                ))
+              ) : (
+                <Text style={styles.ridesInfo}>There are no rides</Text>
+              )}
+            </View>
+          </ScrollView>
+        </View>
+      </ScrollView>
+    );
+  }
 }
