@@ -16,13 +16,12 @@ import styles from "../style/style";
 export const RideItem = ({
   rideItem: { date, end, mobile, name, start, time, seats },
 }) => {
-  addUserToRide = () => {
-    const user = firebase.auth().currentUser;
-    firebase
-      .ref(USER_RIDES + this.state.name + USER_RIDES + this.state.user)
-      .set({
-        isActive: true,
-      });
+  const addUserToRide = () => {
+    /* const user = firebase.auth().currentUser;
+    firebase.ref(RIDES + this.state.name + USER_RIDES + this.state.user).set({
+      isActive: true,
+    }); */
+    seats - 1;
   };
 
   return (
@@ -37,7 +36,7 @@ export const RideItem = ({
       <Text style={styles.cardboxText}> Mobile: {mobile}</Text>
       <Text style={styles.cardboxText}> Seats: {seats}</Text>
 
-      <Pressable style={styles.cardButton} onPress={() => {}}>
+      <Pressable style={styles.cardButton} onPress={addUserToRide}>
         <Text style={styles.cardboxButtonText}>JOIN RIDE</Text>
       </Pressable>
     </View>
