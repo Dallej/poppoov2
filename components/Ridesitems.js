@@ -16,11 +16,11 @@ import styles from "../style/style";
 export const RideItem = ({
   rideItem: { date, end, mobile, name, start, time, seats },
 }) => {
-  const addUserToRide = () => {
-    /* const user = firebase.auth().currentUser;
-    firebase.ref(RIDES + this.state.name + USER_RIDES + this.state.user).set({
+  const addUserToRide = (name) => {
+    const user = firebase.auth().currentUser;
+    firebase.ref(USER_RIDES + name + USER_RIDES + user).set({
       isActive: true,
-    }); */
+    });
     seats - 1;
   };
 

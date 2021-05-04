@@ -31,7 +31,6 @@ export default class AddRide extends React.Component {
       date: moment().format(),
       end: "",
       seats: 4,
-      errorMessage: "",
     };
   }
 
@@ -45,7 +44,7 @@ export default class AddRide extends React.Component {
     ) {
       return true;
     } else {
-      this.state.errorMessage = "information missing";
+      alert("INFORMATION MISSING, all fields must be filled.");
       return false;
     }
   }
@@ -203,7 +202,6 @@ export default class AddRide extends React.Component {
             >
               <Text style={styles.buttonText}>Offer a ride </Text>
             </Pressable>
-            <Text style={styles.errorMessage}>{this.state.errorMessage}</Text>
           </View>
         </ScrollView>
       </TouchableWithoutFeedback>
