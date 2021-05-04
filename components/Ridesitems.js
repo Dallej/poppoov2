@@ -16,12 +16,32 @@ import styles from "../style/style";
 export const RideItem = ({
   rideItem: { date, end, mobile, name, start, time, seats },
 }) => {
-  const addUserToRide = (name) => {
-    const user = firebase.auth().currentUser;
+  // TRYING TO JOIN A RIDE
+  /* const addUserToRide = () => {
+     const user = firebase.auth().currentUser;
     firebase.ref(USER_RIDES + name + USER_RIDES + user).set({
       isActive: true,
-    });
+    }); 
     seats - 1;
+    alert("Successfully joined a ride!");
+    return <View>{name}</View>;
+  }; */
+
+  // TRYING TO PUSH DATA TO FIREBASE
+  const addUserToRide = () => {
+    const user = firebase.auth().currentUser;
+    firebase
+      .database()
+      .ref("/user_rides")
+      .push({
+        name: name,
+        seats: seats - 1,
+        //user: user,
+      })
+      .then(() => {
+        alert("Successfully joined " + name + "'s" + " ride!");
+      })
+      .catch((error) => console.log(error));
   };
 
   return (

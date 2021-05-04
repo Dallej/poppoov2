@@ -13,6 +13,7 @@ import { createIconSetFromFontello } from "react-native-vector-icons";
 import { firebase, ROOT_REF, RIDES, USER_RIDES } from "../firebase/Config";
 import { RideItem } from "../components/Ridesitems";
 import styles from "../style/style";
+import { addUserToRide } from "../components/Ridesitems";
 
 export default class Rides extends React.Component {
   constructor() {
@@ -47,9 +48,8 @@ export default class Rides extends React.Component {
 
           <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
             <View style={{ flexDirection: "row" }}>
-              <Text style={styles.ridesInfo}>
-                You have not joined any rides.
-              </Text>
+              <Text style={styles.ridesInfo}></Text>
+              {addUserToRide}
             </View>
           </ScrollView>
 
