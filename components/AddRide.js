@@ -30,7 +30,7 @@ export default class AddRide extends React.Component {
       start: "",
       date: moment().format(),
       end: "",
-      seats: 4,
+      seats: "",
     };
   }
 
@@ -174,7 +174,7 @@ export default class AddRide extends React.Component {
                 { label: "11 seats", value: 11 },
                 { label: "12 seats", value: 12 },
               ]}
-              defaultValue={this.state.seats}
+              defaultValue={4}
               style={styles.dropDown}
               dropDownStyle={{
                 width: "2.1%",

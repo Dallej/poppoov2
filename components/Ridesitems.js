@@ -12,10 +12,14 @@ import {
 import { firebase, ROOT_REF, RIDES, USER_RIDES } from "../firebase/Config";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import styles from "../style/style";
+import Rides from "./Rides";
+import { set } from "react-native-reanimated";
 
 export const RideItem = ({
   rideItem: { date, end, mobile, name, start, time, seats },
 }) => {
+  let [inRide, setInRide] = useState(false);
+  let [button, setButton] = useState("JOIN RIDE");
   // TRYING TO JOIN A RIDE
   /* const addUserToRide = () => {
      const user = firebase.auth().currentUser;
@@ -30,18 +34,26 @@ export const RideItem = ({
   // TRYING TO PUSH DATA TO FIREBASE
   const addUserToRide = () => {
     const user = firebase.auth().currentUser;
+    let userRef = firebase.database().ref("/rides/" + "-MZrN14UvWadeb9r3mBm");
+    userRef.update({
+      seats: seats - 1,
+    });
     firebase
       .database()
       .ref("/user_rides")
       .push({
         name: name,
         seats: seats - 1,
-        //user: user,
       })
       .then(() => {
         alert("Successfully joined " + name + "'s" + " ride!");
+        setInRide(true);
       })
       .catch((error) => console.log(error));
+
+    if ((inRide = true)) {
+      setButton("JOINED");
+    }
   };
 
   return (
@@ -55,9 +67,8 @@ export const RideItem = ({
       <Text style={styles.cardboxText}> Departure: {time} </Text>
       <Text style={styles.cardboxText}> Mobile: {mobile}</Text>
       <Text style={styles.cardboxText}> Seats: {seats}</Text>
-
       <Pressable style={styles.cardButton} onPress={addUserToRide}>
-        <Text style={styles.cardboxButtonText}>JOIN RIDE</Text>
+        <Text style={styles.cardboxButtonText}>{button}</Text>
       </Pressable>
     </View>
   );
