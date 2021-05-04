@@ -167,6 +167,12 @@ export default class AddRide extends React.Component {
                 { label: "4 seats", value: 4 },
                 { label: "5 seats", value: 5 },
                 { label: "6 seats", value: 6 },
+                { label: "7 seats", value: 7 },
+                { label: "8 seats", value: 8 },
+                { label: "9 seats", value: 9 },
+                { label: "10 seats", value: 10 },
+                { label: "11 seats", value: 11 },
+                { label: "12 seats", value: 12 },
               ]}
               defaultValue={this.state.seats}
               style={styles.dropDown}
