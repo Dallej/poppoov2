@@ -17,6 +17,7 @@ import { set } from "react-native-reanimated";
 
 export const RideItem = ({
   rideItem: { date, end, mobile, name, start, time, seats },
+  id,
 }) => {
   let [inRide, setInRide] = useState(false);
   let [button, setButton] = useState("JOIN RIDE");
@@ -34,7 +35,7 @@ export const RideItem = ({
   // TRYING TO PUSH DATA TO FIREBASE
   const addUserToRide = () => {
     const user = firebase.auth().currentUser;
-    let userRef = firebase.database().ref("/rides/" + "-MZrN14UvWadeb9r3mBm");
+    let userRef = firebase.database().ref("/rides/" + [id]);
     userRef.update({
       seats: seats - 1,
     });
